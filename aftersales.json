@@ -1,1 +1,1 @@
-{"processes": null", apiCalls": null", capabilities": null", applications": [{"name":"GVF","description":"Group Vehicle File","status":0,"contact":"","url":"","tags":null,"systemCluster":"Platform","id":"d1df28b3-094e-4690-aef9-ed75a010f4c0"}]}
+{"processes": [], "apiCalls": [], "capabilities": [], "applications": [{"name":"GVF","description":"","status":0,"contact":"","url":"","systemCluster":"Platform","id":"d1df28b3-094e-4690-aef9-ed75a010f4c0"}]}
