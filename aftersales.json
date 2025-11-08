@@ -1,1 +1,81 @@
-{"processes": [], "apiCalls": [], "capabilities": [], "applications": [{"name":"GVF","description":"","status":0,"contact":"","url":"","systemCluster":"Platform","id":"d1df28b3-094e-4690-aef9-ed75a010f4c0"}]}
+{
+  "processes": [
+    {
+      "name": "Vehicle Reception",
+      "status": 0,
+      "description": "",
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null,
+      "id": "811a6409-f253-4f0a-bec6-bd6ee5651061"
+    },
+    {
+      "name": "Service Process",
+      "status": 0,
+      "description": "",
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null,
+      "id": "1dee9d55-901e-4da3-9c3c-225c10be599e",
+      "steps": [
+        {
+          "processReference": "4c97a6bb-e948-4248-b46e-0df995b482db"
+        },
+        {
+          "processReference": "811a6409-f253-4f0a-bec6-bd6ee5651061"
+        }
+      ]
+    },
+    {
+      "name": "Appointment Booking",
+      "description": "",
+      "id": "4c97a6bb-e948-4248-b46e-0df995b482db",
+      "favorite": true,
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null
+    }
+  ],
+  "apiCalls": [],
+  "capabilities": [
+    {
+      "name": "Vehicle Management",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "repoId": null,
+      "id": "6f3904f5-4266-4ed8-bc2a-5eb96466bfe0"
+    }
+  ],
+  "applications": [
+    {
+      "name": "GVF",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "systemCluster": "Platform",
+      "id": "d1df28b3-094e-4690-aef9-ed75a010f4c0"
+    },
+    {
+      "name": "OrMa",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Platform",
+      "id": "e5a3ddda-72b6-4ac5-b17b-66c20d7f30f0"
+    }
+  ]
+}
