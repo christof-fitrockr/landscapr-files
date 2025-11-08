@@ -1,7 +1,7 @@
 {
   "processes": [
     {
-      "name": "Vehicle Reception",
+      "name": "Check-In",
       "status": 0,
       "description": "",
       "input": "",
@@ -28,9 +28,16 @@
           "processReference": "4c97a6bb-e948-4248-b46e-0df995b482db"
         },
         {
+          "processReference": "e5053c5e-372f-45b7-906d-fe052f24482f"
+        },
+        {
           "processReference": "811a6409-f253-4f0a-bec6-bd6ee5651061"
+        },
+        {
+          "processReference": "85617deb-fc61-4d6a-8828-8a00155c01b6"
         }
-      ]
+      ],
+      "favorite": true
     },
     {
       "name": "Appointment Booking",
@@ -43,10 +50,137 @@
       "tags": null,
       "role": "",
       "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "processReference": "afe3408f-e40c-46cc-9374-d893578eb76a"
+        },
+        {
+          "processReference": "f0a12157-2095-4fb1-8b6c-22dbe618bd0f"
+        },
+        {
+          "processReference": "a745c346-0567-4c8f-a881-dfc90fd33409"
+        },
+        {
+          "processReference": "ff9d9fb3-16ff-4baf-87c5-c20e4d4beb75"
+        },
+        {
+          "processReference": "690969f1-075f-486f-b735-26ca5ffebef7"
+        },
+        {
+          "processReference": "72994a0a-76ab-44db-8f9e-7a89c3a1d6ee"
+        }
+      ]
+    },
+    {
+      "name": "Select Dealer",
+      "description": "",
+      "id": "afe3408f-e40c-46cc-9374-d893578eb76a",
+      "apiCallIds": [
+        "213e4bcf-039c-461a-b173-1cf3c971f597"
+      ]
+    },
+    {
+      "name": "Select Vehicle",
+      "description": "",
+      "id": "f0a12157-2095-4fb1-8b6c-22dbe618bd0f"
+    },
+    {
+      "name": "Select Services",
+      "description": "",
+      "id": "a745c346-0567-4c8f-a881-dfc90fd33409"
+    },
+    {
+      "name": "Select Appointment Slot and Options",
+      "description": "",
+      "id": "ff9d9fb3-16ff-4baf-87c5-c20e4d4beb75",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null
+    },
+    {
+      "name": "Approve Appointment",
+      "description": "",
+      "id": "690969f1-075f-486f-b735-26ca5ffebef7"
+    },
+    {
+      "name": "Receive Booking Confirmation",
+      "description": "",
+      "id": "72994a0a-76ab-44db-8f9e-7a89c3a1d6ee"
+    },
+    {
+      "name": "Pre Check-In",
+      "description": "",
+      "id": "e5053c5e-372f-45b7-906d-fe052f24482f",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null,
+      "favorite": true,
+      "steps": [
+        {
+          "processReference": "ef56ee7a-722f-4b95-bb00-9107a1e2d030"
+        },
+        {
+          "processReference": "f4afbbb6-cab9-49ef-a629-cbb87b8008ec"
+        },
+        {
+          "processReference": "0cf8db17-ffa8-4f29-b3b0-7e80027fbc64"
+        },
+        {
+          "processReference": "c7e2f4b3-1fb5-4525-b750-e95375b2a4c7"
+        }
+      ]
+    },
+    {
+      "name": "Execution",
+      "description": "",
+      "id": "85617deb-fc61-4d6a-8828-8a00155c01b6"
+    },
+    {
+      "name": "Review Booked Appointment",
+      "description": "",
+      "id": "f4afbbb6-cab9-49ef-a629-cbb87b8008ec"
+    },
+    {
+      "name": "Add Appointment Options",
+      "description": "",
+      "id": "0cf8db17-ffa8-4f29-b3b0-7e80027fbc64"
+    },
+    {
+      "name": "Receive Pre Check-In Notification",
+      "description": "",
+      "id": "ef56ee7a-722f-4b95-bb00-9107a1e2d030"
+    },
+    {
+      "name": "Confirm Check-In",
+      "description": "",
+      "id": "c7e2f4b3-1fb5-4525-b750-e95375b2a4c7"
+    }
+  ],
+  "apiCalls": [
+    {
+      "name": "Get Dealers for Customer",
+      "description": "",
+      "id": "213e4bcf-039c-461a-b173-1cf3c971f597",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "Customer Id",
+      "output": "List of Dealers",
       "repoId": null
     }
   ],
-  "apiCalls": [],
   "capabilities": [
     {
       "name": "Vehicle Management",
