@@ -1,7 +1,7 @@
 {
   "processes": [
     {
-      "name": "d",
+      "name": "Check-In",
       "status": 0,
       "description": "",
       "input": "",
@@ -10,10 +10,10 @@
       "role": "",
       "implementedBy": null,
       "repoId": null,
-      "id": "3b3c340f-e262-4fa6-ba54-032e09459bf9"
+      "id": "811a6409-f253-4f0a-bec6-bd6ee5651061"
     },
     {
-      "name": "f",
+      "name": "Service Process",
       "status": 0,
       "description": "",
       "input": "",
@@ -22,11 +22,202 @@
       "role": "",
       "implementedBy": null,
       "repoId": null,
-      "id": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
+      "id": "1dee9d55-901e-4da3-9c3c-225c10be599e",
+      "steps": [
+        {
+          "processReference": "4c97a6bb-e948-4248-b46e-0df995b482db"
+        },
+        {
+          "processReference": "e5053c5e-372f-45b7-906d-fe052f24482f"
+        },
+        {
+          "processReference": "811a6409-f253-4f0a-bec6-bd6ee5651061"
+        },
+        {
+          "processReference": "85617deb-fc61-4d6a-8828-8a00155c01b6"
+        }
+      ],
+      "favorite": true
+    },
+    {
+      "name": "Appointment Booking",
+      "description": "",
+      "id": "4c97a6bb-e948-4248-b46e-0df995b482db",
+      "favorite": true,
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "processReference": "afe3408f-e40c-46cc-9374-d893578eb76a"
+        },
+        {
+          "processReference": "f0a12157-2095-4fb1-8b6c-22dbe618bd0f"
+        },
+        {
+          "processReference": "a745c346-0567-4c8f-a881-dfc90fd33409"
+        },
+        {
+          "processReference": "ff9d9fb3-16ff-4baf-87c5-c20e4d4beb75"
+        },
+        {
+          "processReference": "690969f1-075f-486f-b735-26ca5ffebef7"
+        },
+        {
+          "processReference": "72994a0a-76ab-44db-8f9e-7a89c3a1d6ee"
+        }
+      ]
+    },
+    {
+      "name": "Select Dealer",
+      "description": "",
+      "id": "afe3408f-e40c-46cc-9374-d893578eb76a",
+      "apiCallIds": [
+        "213e4bcf-039c-461a-b173-1cf3c971f597"
+      ]
+    },
+    {
+      "name": "Select Vehicle",
+      "description": "",
+      "id": "f0a12157-2095-4fb1-8b6c-22dbe618bd0f"
+    },
+    {
+      "name": "Select Services",
+      "description": "",
+      "id": "a745c346-0567-4c8f-a881-dfc90fd33409"
+    },
+    {
+      "name": "Select Appointment Slot and Options",
+      "description": "",
+      "id": "ff9d9fb3-16ff-4baf-87c5-c20e4d4beb75",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null
+    },
+    {
+      "name": "Approve Appointment",
+      "description": "",
+      "id": "690969f1-075f-486f-b735-26ca5ffebef7"
+    },
+    {
+      "name": "Receive Booking Confirmation",
+      "description": "",
+      "id": "72994a0a-76ab-44db-8f9e-7a89c3a1d6ee"
+    },
+    {
+      "name": "Pre Check-In",
+      "description": "",
+      "id": "e5053c5e-372f-45b7-906d-fe052f24482f",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null,
+      "favorite": true,
+      "steps": [
+        {
+          "processReference": "ef56ee7a-722f-4b95-bb00-9107a1e2d030"
+        },
+        {
+          "processReference": "f4afbbb6-cab9-49ef-a629-cbb87b8008ec"
+        },
+        {
+          "processReference": "0cf8db17-ffa8-4f29-b3b0-7e80027fbc64"
+        },
+        {
+          "processReference": "c7e2f4b3-1fb5-4525-b750-e95375b2a4c7"
+        }
+      ]
+    },
+    {
+      "name": "Execution",
+      "description": "",
+      "id": "85617deb-fc61-4d6a-8828-8a00155c01b6"
+    },
+    {
+      "name": "Review Booked Appointment",
+      "description": "",
+      "id": "f4afbbb6-cab9-49ef-a629-cbb87b8008ec"
+    },
+    {
+      "name": "Add Appointment Options",
+      "description": "",
+      "id": "0cf8db17-ffa8-4f29-b3b0-7e80027fbc64"
+    },
+    {
+      "name": "Receive Pre Check-In Notification",
+      "description": "",
+      "id": "ef56ee7a-722f-4b95-bb00-9107a1e2d030"
+    },
+    {
+      "name": "Confirm Check-In",
+      "description": "",
+      "id": "c7e2f4b3-1fb5-4525-b750-e95375b2a4c7"
     }
   ],
-  "apiCalls": [],
-  "capabilities": [],
+  "apiCalls": [
+    {
+      "name": "Get Dealers for Customer",
+      "description": "",
+      "id": "213e4bcf-039c-461a-b173-1cf3c971f597",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "55d9f900-9b3a-4b56-bc0f-ac7a990947a5",
+      "implementedBy": [
+        "38d8dd7b-25e8-4f5f-9a16-1622777030d1"
+      ],
+      "tags": null,
+      "input": "Customer Id",
+      "output": "List of Dealers",
+      "repoId": null
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "Vehicle Management",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "repoId": null,
+      "id": "6f3904f5-4266-4ed8-bc2a-5eb96466bfe0",
+      "implementedBy": [
+        "d1df28b3-094e-4690-aef9-ed75a010f4c0"
+      ]
+    },
+    {
+      "name": "Order Management",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "repoId": null,
+      "id": "bb0172d2-df7d-40fa-b749-cb4624a929d2",
+      "implementedBy": [
+        "e5a3ddda-72b6-4ac5-b17b-66c20d7f30f0"
+      ]
+    },
+    {
+      "name": "Masterdata",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "repoId": null,
+      "id": "55d9f900-9b3a-4b56-bc0f-ac7a990947a5",
+      "implementedBy": [
+        "38d8dd7b-25e8-4f5f-9a16-1622777030d1"
+      ]
+    }
+  ],
   "applications": [
     {
       "name": "GVF",
@@ -34,120 +225,30 @@
       "status": 0,
       "contact": "",
       "url": "",
-      "tags": null,
       "systemCluster": "Platform",
       "id": "d1df28b3-094e-4690-aef9-ed75a010f4c0"
-    }
-  ],
-  "journeys": [
+    },
     {
-      "name": "After Sales",
+      "name": "OrMa",
       "description": "",
-      "items": [
-        {
-          "name": "d",
-          "status": 0,
-          "description": "",
-          "input": "",
-          "output": "",
-          "tags": null,
-          "role": "",
-          "implementedBy": null,
-          "repoId": null,
-          "id": "3b3c340f-e262-4fa6-ba54-032e09459bf9"
-        },
-        {
-          "name": "After Sales",
-          "description": "",
-          "items": [
-            {
-              "name": "d",
-              "status": 0,
-              "description": "",
-              "input": "",
-              "output": "",
-              "tags": null,
-              "role": "",
-              "implementedBy": null,
-              "repoId": null,
-              "id": "3b3c340f-e262-4fa6-ba54-032e09459bf9"
-            },
-            {
-              "name": "f",
-              "status": 0,
-              "description": "",
-              "input": "",
-              "output": "",
-              "tags": null,
-              "role": "",
-              "implementedBy": null,
-              "repoId": null,
-              "id": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
-            }
-          ],
-          "id": "852bbb6d-d07d-41fc-982c-3bdee65ce456"
-        },
-        {
-          "name": "f",
-          "status": 0,
-          "description": "",
-          "input": "",
-          "output": "",
-          "tags": null,
-          "role": "",
-          "implementedBy": null,
-          "repoId": null,
-          "id": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
-        }
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Platform",
+      "id": "e5a3ddda-72b6-4ac5-b17b-66c20d7f30f0"
+    },
+    {
+      "name": "BPCM",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": [
+        "In Development"
       ],
-      "id": "852bbb6d-d07d-41fc-982c-3bdee65ce456",
-      "layout": {
-        "nodes": [
-          {
-            "id": "proc_7odnsip",
-            "type": "process",
-            "label": "d",
-            "x": 412.19999980926514,
-            "y": 145.39999389648438,
-            "width": 120,
-            "height": 60,
-            "processId": "3b3c340f-e262-4fa6-ba54-032e09459bf9"
-          },
-          {
-            "id": "proc_r37qeud",
-            "type": "process",
-            "label": "f",
-            "x": 481.19999980926514,
-            "y": 379.3999938964844,
-            "width": 120,
-            "height": 60,
-            "processId": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
-          },
-          {
-            "id": "proc_ebigauh",
-            "type": "process",
-            "label": "f",
-            "x": 784.1999998092651,
-            "y": 285.3999938964844,
-            "width": 120,
-            "height": 60,
-            "processId": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
-          },
-          {
-            "id": "grp_todrtg0",
-            "type": "group",
-            "label": "Group",
-            "x": 190.19999980926514,
-            "y": -18.600006103515625,
-            "width": 853,
-            "height": 645
-          }
-        ],
-        "edges": [],
-        "panX": 291,
-        "panY": 155,
-        "zoom": 1
-      }
+      "systemCluster": "Platform",
+      "id": "38d8dd7b-25e8-4f5f-9a16-1622777030d1"
     }
   ]
 }
