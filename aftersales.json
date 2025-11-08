@@ -1,33 +1,305 @@
 {
   "processes": [
     {
-      "name": "d",
+      "id": "a01b61cf-11cd-4c70-9508-80db1fb2cddd",
+      "repoId": null,
+      "name": "App or Portal",
+      "description": "User logs in to the Brand portal or the app.",
       "status": 0,
-      "description": "",
       "input": "",
       "output": "",
-      "tags": null,
-      "role": "",
-      "implementedBy": null,
-      "repoId": null,
-      "id": "3b3c340f-e262-4fa6-ba54-032e09459bf9"
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
     },
     {
-      "name": "f",
-      "status": 0,
-      "description": "",
-      "input": "",
-      "output": "",
-      "tags": null,
-      "role": "",
-      "implementedBy": null,
-      "repoId": null,
-      "id": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
-    },
-    {
-      "id": "055ba3da-d3b9-4739-9309-e35f66f2ece3",
+      "id": "6ec835d5-c325-41a0-9327-6c1e1a56cc5d",
       "repoId": "",
-      "name": "dsdd",
+      "name": "Campaign Notification",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "95cb1f78-9ae8-4b29-a073-325a9f021e5b",
+      "repoId": "",
+      "name": "Display Upcoming Services",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "811f9359-9797-4671-9086-37ce831f48e9",
+      "repoId": "",
+      "name": "Display Service History",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "6731c039-7f00-492d-81d5-60159eed011b",
+      "repoId": "",
+      "name": "Buy Accessories",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "1316fea7-4c3d-4877-ac9f-e266c2ccc655",
+      "repoId": "",
+      "name": "Display Vehicle Condition",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "681d7fc2-0988-4ad7-a90d-2b59e149e82e",
+      "repoId": "",
+      "name": "Customer Lead",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "bcdf565f-dfdd-44f4-be7b-35682a658100",
+      "repoId": "",
+      "name": "Vehicle Issue",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "563d4493-e414-43c0-9528-a9f3014cf051",
+      "repoId": "",
+      "name": "Open Lead",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "45687cff-90e4-492b-9de8-a7f6eac2f876",
+      "repoId": "",
+      "name": "Campaign",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "af8d2d31-948c-44cc-91b4-eb95b800174e",
+      "repoId": "",
+      "name": "Chat",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "793e0aea-b6db-4bbf-88d9-79f2bd9718c6",
+      "repoId": "",
+      "name": "Guided Order Creation",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "7b6ed73d-88e4-4661-923d-ffcfde5481d3",
+      "repoId": "",
+      "name": "Appointment Booking",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [
+        {
+          "processReference": "803fa9a2-4b04-4c6c-be84-3283695b4dc3"
+        },
+        {
+          "processReference": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6"
+        },
+        {
+          "processReference": "8f4cb436-42b7-495c-8dde-457d81cf5ca0"
+        },
+        {
+          "processReference": "b3e56e27-ecd5-4c5c-beb0-2ad5ab9df7aa"
+        },
+        {
+          "processReference": "fe51fbe5-320f-4adf-bf50-027d456df61d"
+        }
+      ],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "name": "Select Dealer",
+      "description": "",
+      "id": "803fa9a2-4b04-4c6c-be84-3283695b4dc3"
+    },
+    {
+      "name": "Select Services",
+      "description": "",
+      "id": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6"
+    },
+    {
+      "name": "Select Appointment Slots",
+      "description": "",
+      "id": "8f4cb436-42b7-495c-8dde-457d81cf5ca0"
+    },
+    {
+      "name": "Book Appointment",
+      "description": "",
+      "id": "b3e56e27-ecd5-4c5c-beb0-2ad5ab9df7aa"
+    },
+    {
+      "name": "Receive Booking Confirmation",
+      "description": "",
+      "id": "fe51fbe5-320f-4adf-bf50-027d456df61d"
+    },
+    {
+      "id": "974d6611-2858-4902-9715-caa05e0618ad",
+      "repoId": "",
+      "name": "Inform Customer about Offer",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "c78e1107-c788-458d-b9df-e657c2f980af",
+      "repoId": "",
+      "name": "Digital Payment",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "b65df90b-345d-4c37-a4f7-21bb8ff6c4ad",
+      "repoId": "",
+      "name": "Confirmed Order",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "e2173398-6f88-407d-b8a5-671c81a8356c",
+      "repoId": "",
+      "name": "Determine Repair Type",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a",
+      "repoId": "",
+      "name": "Remote Repair",
       "description": "",
       "status": 0,
       "input": "",
@@ -56,7 +328,7 @@
   ],
   "journeys": [
     {
-      "name": "After Sales",
+      "name": "Service Process",
       "description": "",
       "items": [
         {
@@ -119,49 +391,330 @@
       "layout": {
         "nodes": [
           {
-            "id": "proc_7odnsip",
+            "id": "proc_pmi7j7w",
             "type": "process",
-            "label": "d",
-            "x": 412.19999980926514,
+            "label": "Login to ONE.Hub",
+            "x": -95.80000019073486,
+            "y": 141.39999389648438,
+            "width": 160,
+            "height": 60,
+            "processId": "a01b61cf-11cd-4c70-9508-80db1fb2cddd"
+          },
+          {
+            "id": "proc_932m0i5",
+            "type": "process",
+            "label": "Campaign Notification",
+            "x": -100.80000019073486,
+            "y": 317.3999938964844,
+            "width": 164,
+            "height": 60,
+            "processId": "6ec835d5-c325-41a0-9327-6c1e1a56cc5d"
+          },
+          {
+            "id": "proc_ryvqkwg",
+            "type": "process",
+            "label": "Display Upcoming Services",
+            "x": 305.19999980926514,
+            "y": -55.600006103515625,
+            "width": 183,
+            "height": 60,
+            "processId": "95cb1f78-9ae8-4b29-a073-325a9f021e5b"
+          },
+          {
+            "id": "proc_wb5xdoj",
+            "type": "process",
+            "label": "Display Service History",
+            "x": 308.19999980926514,
+            "y": 68.39999389648438,
+            "width": 185,
+            "height": 60,
+            "processId": "811f9359-9797-4671-9086-37ce831f48e9"
+          },
+          {
+            "id": "proc_tzbfd4d",
+            "type": "process",
+            "label": "Buy Accessories",
+            "x": 309.19999980926514,
+            "y": 197.39999389648438,
+            "width": 184,
+            "height": 60,
+            "processId": "6731c039-7f00-492d-81d5-60159eed011b"
+          },
+          {
+            "id": "proc_k6kt046",
+            "type": "process",
+            "label": "Display Vehicle Condition",
+            "x": 306.19999980926514,
+            "y": 343.3999938964844,
+            "width": 189,
+            "height": 60,
+            "processId": "1316fea7-4c3d-4877-ac9f-e266c2ccc655"
+          },
+          {
+            "id": "grp_wad0sm0",
+            "type": "group",
+            "label": "Usage",
+            "x": -164.80000019073486,
+            "y": -193.60000610351562,
+            "width": 680,
+            "height": 675
+          },
+          {
+            "id": "proc_gqnzg40",
+            "type": "process",
+            "label": "Customer Lead",
+            "x": 607.1999998092651,
+            "y": -56.600006103515625,
+            "width": 122,
+            "height": 60,
+            "processId": "681d7fc2-0988-4ad7-a90d-2b59e149e82e"
+          },
+          {
+            "id": "proc_qz89ssf",
+            "type": "process",
+            "label": "Vehicle Issue",
+            "x": 608.1999998092651,
+            "y": 185.39999389648438,
+            "width": 124,
+            "height": 60,
+            "processId": "bcdf565f-dfdd-44f4-be7b-35682a658100"
+          },
+          {
+            "id": "proc_uon41qe",
+            "type": "process",
+            "label": "Open Lead",
+            "x": 603.1999998092651,
+            "y": 264.3999938964844,
+            "width": 133,
+            "height": 60,
+            "processId": "563d4493-e414-43c0-9528-a9f3014cf051"
+          },
+          {
+            "id": "proc_2ernkrw",
+            "type": "process",
+            "label": "Campaign",
+            "x": 604.1999998092651,
+            "y": 343.3999938964844,
+            "width": 139,
+            "height": 60,
+            "processId": "45687cff-90e4-492b-9de8-a7f6eac2f876"
+          },
+          {
+            "id": "grp_5skdm39",
+            "type": "group",
+            "label": "Contact",
+            "x": 534.1999998092651,
+            "y": -194.60000610351562,
+            "width": 2351.6343885404385,
+            "height": 677
+          },
+          {
+            "id": "proc_vxka8xr",
+            "type": "process",
+            "label": "Chat",
+            "x": 733.1999998092651,
+            "y": -188.60000610351562,
+            "width": 161,
+            "height": 57,
+            "processId": "af8d2d31-948c-44cc-91b4-eb95b800174e"
+          },
+          {
+            "id": "proc_md0afs5",
+            "type": "process",
+            "label": "Guided Order Creation",
+            "x": 852.1999998092651,
+            "y": 263.3999938964844,
+            "width": 166,
+            "height": 60,
+            "processId": "793e0aea-b6db-4bbf-88d9-79f2bd9718c6"
+          },
+          {
+            "id": "dec_64hcvrf",
+            "type": "decision",
+            "label": "Channel",
+            "x": 808.1999998092651,
+            "y": -37.600006103515625,
+            "width": 24,
+            "height": 24
+          },
+          {
+            "id": "proc_m0yug61",
+            "type": "process",
+            "label": "Appointment Booking",
+            "x": 1024.1999998092651,
+            "y": -65.60000610351562,
+            "width": 164,
+            "height": 60,
+            "processId": "7b6ed73d-88e4-4661-923d-ffcfde5481d3"
+          },
+          {
+            "id": "proc_sjlmzs6",
+            "type": "process",
+            "label": "Inform Customer about Offer",
+            "x": 1130.1999998092651,
+            "y": 112.39999389648438,
+            "width": 218,
+            "height": 60,
+            "processId": "974d6611-2858-4902-9715-caa05e0618ad"
+          },
+          {
+            "id": "proc_f8ceqnt",
+            "type": "process",
+            "label": "Digital Payment",
+            "x": 1308.1999998092651,
+            "y": -56.600006103515625,
+            "width": 120,
+            "height": 60,
+            "processId": "c78e1107-c788-458d-b9df-e657c2f980af"
+          },
+          {
+            "id": "proc_qygoe31",
+            "type": "process",
+            "label": "Confirmed Order",
+            "x": 1440.1999998092651,
             "y": 145.39999389648438,
             "width": 120,
             "height": 60,
-            "processId": "3b3c340f-e262-4fa6-ba54-032e09459bf9"
+            "processId": "b65df90b-345d-4c37-a4f7-21bb8ff6c4ad"
           },
           {
-            "id": "proc_r37qeud",
+            "id": "proc_e6l0cml",
             "type": "process",
-            "label": "f",
-            "x": 481.19999980926514,
-            "y": 379.3999938964844,
-            "width": 120,
+            "label": "Determine Repair Type",
+            "x": 1614.1999998092651,
+            "y": 144.39999389648438,
+            "width": 192,
             "height": 60,
-            "processId": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
+            "processId": "e2173398-6f88-407d-b8a5-671c81a8356c"
           },
           {
-            "id": "proc_ebigauh",
+            "id": "proc_3bocm6v",
             "type": "process",
-            "label": "f",
-            "x": 784.1999998092651,
-            "y": 285.3999938964844,
-            "width": 120,
+            "label": "Remote Repair",
+            "x": 1834.000507509113,
+            "y": -165.22002252666164,
+            "width": 215.47678064904153,
             "height": 60,
-            "processId": "39f96c61-e97b-4d55-86f7-bde4c99b46be"
-          },
-          {
-            "id": "grp_todrtg0",
-            "type": "group",
-            "label": "Group",
-            "x": 190.19999980926514,
-            "y": -18.600006103515625,
-            "width": 853,
-            "height": 645
+            "processId": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a"
           }
         ],
-        "edges": [],
-        "panX": 291,
-        "panY": 155,
-        "zoom": 1
+        "edges": [
+          {
+            "id": "e_jtxa5s2",
+            "from": "proc_pmi7j7w",
+            "to": "proc_ryvqkwg"
+          },
+          {
+            "id": "e_gggo430",
+            "from": "proc_pmi7j7w",
+            "to": "proc_wb5xdoj"
+          },
+          {
+            "id": "e_um18wkj",
+            "from": "proc_pmi7j7w",
+            "to": "proc_tzbfd4d"
+          },
+          {
+            "id": "e_8f0n9ht",
+            "from": "proc_pmi7j7w",
+            "to": "proc_k6kt046"
+          },
+          {
+            "id": "e_fiy5c98",
+            "from": "proc_932m0i5",
+            "to": "proc_tzbfd4d"
+          },
+          {
+            "id": "e_cb9dfv5",
+            "from": "dec_64hcvrf",
+            "to": "proc_md0afs5"
+          },
+          {
+            "id": "e_wwkbhvj",
+            "from": "proc_qz89ssf",
+            "to": "proc_md0afs5"
+          },
+          {
+            "id": "e_iw0jqg3",
+            "from": "proc_uon41qe",
+            "to": "proc_md0afs5"
+          },
+          {
+            "id": "e_1o4qz3h",
+            "from": "proc_2ernkrw",
+            "to": "proc_md0afs5"
+          },
+          {
+            "id": "e_b16lxaf",
+            "from": "proc_gqnzg40",
+            "to": "dec_64hcvrf"
+          },
+          {
+            "id": "e_1oclhdv",
+            "from": "dec_64hcvrf",
+            "to": "proc_m0yug61",
+            "label": "Online Booking"
+          },
+          {
+            "id": "e_s7fy7my",
+            "from": "dec_64hcvrf",
+            "to": "proc_vxka8xr"
+          },
+          {
+            "id": "e_ovbkend",
+            "from": "proc_vxka8xr",
+            "to": "proc_m0yug61"
+          },
+          {
+            "id": "e_2yw8qk6",
+            "from": "proc_m0yug61",
+            "to": "proc_md0afs5"
+          },
+          {
+            "id": "e_wkahvnh",
+            "from": "proc_md0afs5",
+            "to": "proc_sjlmzs6",
+            "label": "If Dealer Iniiated"
+          },
+          {
+            "id": "e_0o987qw",
+            "from": "proc_m0yug61",
+            "to": "proc_f8ceqnt"
+          },
+          {
+            "id": "e_7lnjx2n",
+            "from": "proc_m0yug61",
+            "to": "proc_qygoe31"
+          },
+          {
+            "id": "e_7axfbwx",
+            "from": "proc_f8ceqnt",
+            "to": "proc_qygoe31"
+          },
+          {
+            "id": "e_v6z6uup",
+            "from": "proc_sjlmzs6",
+            "to": "proc_qygoe31"
+          },
+          {
+            "id": "e_verwxax",
+            "from": "proc_md0afs5",
+            "to": "proc_qygoe31"
+          },
+          {
+            "id": "e_46ijsx0",
+            "from": "proc_qygoe31",
+            "to": "proc_e6l0cml"
+          },
+          {
+            "id": "e_z68hvdw",
+            "from": "proc_e6l0cml",
+            "to": "proc_3bocm6v"
+          }
+        ],
+        "panX": 182.61349242423233,
+        "panY": 410.0406856214964,
+        "zoom": 0.6703200460356392
       }
     }
   ]
