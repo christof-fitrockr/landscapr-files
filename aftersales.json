@@ -310,6 +310,111 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "id": "96703404-2e82-48cc-956e-3a1cff8d8366",
+      "repoId": "",
+      "name": "Prepare Order",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "3d37d771-e468-4817-8c7e-e777d3fbc754",
+      "repoId": "",
+      "name": "Order Parts",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "7f951175-e9c5-44a9-8662-98c2a7327c66",
+      "repoId": "",
+      "name": "Vehicle Pick Up",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "f827c076-9a68-4b24-8dbf-99d942f199b3",
+      "repoId": "",
+      "name": "Autonomous Drive",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "d652e206-61b9-4b95-8670-78cdd05bcf60",
+      "repoId": "",
+      "name": "Digital Service Station",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "fdf525cf-e637-45d3-a92b-fe7f3d88b293",
+      "repoId": "",
+      "name": "Dialog Reception",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "85be88b5-1edb-4ef7-9b2c-0a078b82f9b1",
+      "repoId": "",
+      "name": "Pre Check-In",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
     }
   ],
   "apiCalls": [],
@@ -502,10 +607,10 @@
           {
             "id": "grp_5skdm39",
             "type": "group",
-            "label": "Contact",
-            "x": 534.1999998092651,
+            "label": "Initiation",
+            "x": 523.1999998092651,
             "y": -194.60000610351562,
-            "width": 2351.6343885404385,
+            "width": 1729.6343885404385,
             "height": 677
           },
           {
@@ -596,6 +701,122 @@
             "width": 215.47678064904153,
             "height": 60,
             "processId": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a"
+          },
+          {
+            "id": "proc_h4ud6e6",
+            "type": "process",
+            "label": "Prepare Order",
+            "x": 1911.5753917864592,
+            "y": 136.128566396875,
+            "width": 120,
+            "height": 60,
+            "processId": "96703404-2e82-48cc-956e-3a1cff8d8366"
+          },
+          {
+            "id": "dec_i6mwee2",
+            "type": "decision",
+            "label": "Parts Available",
+            "x": 2114.7251603411514,
+            "y": 155.62039109451626,
+            "width": 24,
+            "height": 24
+          },
+          {
+            "id": "proc_rpusnea",
+            "type": "process",
+            "label": "Order Parts",
+            "x": 2137.8396145741735,
+            "y": 312.26198434684966,
+            "width": 120,
+            "height": 60,
+            "processId": "3d37d771-e468-4817-8c7e-e777d3fbc754"
+          },
+          {
+            "id": "dec_4hc8oi9",
+            "type": "decision",
+            "label": "Vehicle Check-In Type",
+            "x": 2314.350402988767,
+            "y": 127.1612676063099,
+            "width": 24,
+            "height": 24
+          },
+          {
+            "id": "proc_2qh07lp",
+            "type": "process",
+            "label": "Vehicle Pick Up",
+            "x": 2442.3942318493523,
+            "y": -37.35446461384902,
+            "width": 120,
+            "height": 60,
+            "processId": "7f951175-e9c5-44a9-8662-98c2a7327c66"
+          },
+          {
+            "id": "proc_rf0iipt",
+            "type": "process",
+            "label": "Autonomous Drive",
+            "x": 2448.3942318493523,
+            "y": 58.64553538615098,
+            "width": 120,
+            "height": 60,
+            "processId": "f827c076-9a68-4b24-8dbf-99d942f199b3"
+          },
+          {
+            "id": "proc_9u3ycvl",
+            "type": "process",
+            "label": "Digital Service Station",
+            "x": 2457.3942318493523,
+            "y": 173.64553538615098,
+            "width": 120,
+            "height": 60,
+            "processId": "d652e206-61b9-4b95-8670-78cdd05bcf60"
+          },
+          {
+            "id": "proc_tb95a38",
+            "type": "process",
+            "label": "Dialog Reception",
+            "x": 2461.3942318493523,
+            "y": 309.645535386151,
+            "width": 120,
+            "height": 60,
+            "processId": "fdf525cf-e637-45d3-a92b-fe7f3d88b293"
+          },
+          {
+            "id": "proc_03w2d8k",
+            "type": "process",
+            "label": "Pre Check-In",
+            "x": 2443.3942318493523,
+            "y": -137.35446461384902,
+            "width": 120,
+            "height": 60,
+            "processId": "85be88b5-1edb-4ef7-9b2c-0a078b82f9b1"
+          },
+          {
+            "id": "grp_l2c9vzd",
+            "type": "group",
+            "label": "Check-In",
+            "x": 2270.3942318493523,
+            "y": -195.35446461384902,
+            "width": 1120,
+            "height": 674
+          },
+          {
+            "id": "proc_1g3xz91",
+            "type": "process",
+            "label": "Prepare Order",
+            "x": 2658.3942318493523,
+            "y": 107.64553538615098,
+            "width": 120,
+            "height": 60,
+            "processId": "96703404-2e82-48cc-956e-3a1cff8d8366"
+          },
+          {
+            "id": "dec_hlo61v6",
+            "type": "decision",
+            "label": "Vehicle Checked In",
+            "x": 2847.3942318493523,
+            "y": 121.64553538615098,
+            "width": 24,
+            "height": 24
           }
         ],
         "edges": [
@@ -710,11 +931,91 @@
             "id": "e_z68hvdw",
             "from": "proc_e6l0cml",
             "to": "proc_3bocm6v"
+          },
+          {
+            "id": "e_fevy4gb",
+            "from": "proc_e6l0cml",
+            "to": "proc_h4ud6e6"
+          },
+          {
+            "id": "e_h3lz9j1",
+            "from": "proc_h4ud6e6",
+            "to": "dec_i6mwee2"
+          },
+          {
+            "id": "e_gbwjfif",
+            "from": "dec_i6mwee2",
+            "to": "proc_rpusnea"
+          },
+          {
+            "id": "e_6hfnn9l",
+            "from": "proc_rpusnea",
+            "to": "dec_4hc8oi9"
+          },
+          {
+            "id": "e_q1lwb0k",
+            "from": "dec_i6mwee2",
+            "to": "dec_4hc8oi9"
+          },
+          {
+            "id": "e_q6544sc",
+            "from": "dec_4hc8oi9",
+            "to": "proc_03w2d8k"
+          },
+          {
+            "id": "e_lf5v22o",
+            "from": "dec_4hc8oi9",
+            "to": "proc_2qh07lp"
+          },
+          {
+            "id": "e_ra6s9nc",
+            "from": "dec_4hc8oi9",
+            "to": "proc_rf0iipt"
+          },
+          {
+            "id": "e_8w69oq6",
+            "from": "dec_4hc8oi9",
+            "to": "proc_9u3ycvl"
+          },
+          {
+            "id": "e_cpnkp4e",
+            "from": "dec_4hc8oi9",
+            "to": "proc_tb95a38"
+          },
+          {
+            "id": "e_pc2w4kq",
+            "from": "proc_tb95a38",
+            "to": "proc_1g3xz91"
+          },
+          {
+            "id": "e_198inzh",
+            "from": "proc_9u3ycvl",
+            "to": "proc_1g3xz91"
+          },
+          {
+            "id": "e_ii8kb3m",
+            "from": "proc_rf0iipt",
+            "to": "proc_1g3xz91"
+          },
+          {
+            "id": "e_g5wrl82",
+            "from": "proc_2qh07lp",
+            "to": "proc_1g3xz91"
+          },
+          {
+            "id": "e_yel2h9q",
+            "from": "proc_03w2d8k",
+            "to": "proc_1g3xz91"
+          },
+          {
+            "id": "e_mthl0z8",
+            "from": "proc_1g3xz91",
+            "to": "dec_hlo61v6"
           }
         ],
-        "panX": 182.61349242423233,
-        "panY": 410.0406856214964,
-        "zoom": 0.6703200460356392
+        "panX": -764.1942320400872,
+        "panY": 398.7544585103334,
+        "zoom": 1
       }
     }
   ]
