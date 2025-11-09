@@ -418,7 +418,33 @@
     }
   ],
   "apiCalls": [],
-  "capabilities": [],
+  "capabilities": [
+    {
+      "name": "Vehicle Management",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "repoId": null,
+      "id": "e331232b-6483-4a5a-ba7e-820bc9507768",
+      "implementedBy": [
+        "d1df28b3-094e-4690-aef9-ed75a010f4c0",
+        "7fd16d3a-26e8-4104-beaa-dbcf78ce2147",
+        "65b64d0b-0049-4120-a2b9-c33b0c25fed7",
+        "69c70866-f556-4708-9dce-d68fa0c58601"
+      ]
+    },
+    {
+      "name": "Order Management",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "repoId": null,
+      "id": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "implementedBy": [
+        "9135bbfa-bbd5-41b2-b327-580e3b199493"
+      ]
+    }
+  ],
   "applications": [
     {
       "name": "GVF",
@@ -429,6 +455,26 @@
       "tags": null,
       "systemCluster": "Platform",
       "id": "d1df28b3-094e-4690-aef9-ed75a010f4c0"
+    },
+    {
+      "name": "OrMa",
+      "description": "",
+      "id": "9135bbfa-bbd5-41b2-b327-580e3b199493"
+    },
+    {
+      "name": "Reserve",
+      "description": "",
+      "id": "7fd16d3a-26e8-4104-beaa-dbcf78ce2147"
+    },
+    {
+      "name": "Recall2",
+      "description": "",
+      "id": "65b64d0b-0049-4120-a2b9-c33b0c25fed7"
+    },
+    {
+      "name": "OCW",
+      "description": "",
+      "id": "69c70866-f556-4708-9dce-d68fa0c58601"
     }
   ],
   "journeys": [
