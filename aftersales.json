@@ -66,6 +66,11 @@
       "implementedBy": []
     },
     {
+      "name": "Search TPI ",
+      "description": "",
+      "id": "6276cacf-5245-41be-a292-8e79a34d0d67"
+    },
+    {
       "id": "6731c039-7f00-492d-81d5-60159eed011b",
       "repoId": "",
       "name": "Buy Accessories",
@@ -120,7 +125,23 @@
       "output": "",
       "tags": [],
       "role": 0,
-      "steps": [],
+      "steps": [
+        {
+          "processReference": "6276cacf-5245-41be-a292-8e79a34d0d67"
+        },
+        {
+          "processReference": "a7d52411-9420-4c45-b2eb-74a0d5e4c4e5"
+        },
+        {
+          "processReference": "f1f108c0-ed0a-49bc-b662-76a7057382c2"
+        },
+        {
+          "processReference": "9310f6c0-03b6-40a0-a521-b94acc0c5beb"
+        },
+        {
+          "processReference": "e509917e-acbb-494f-881d-0d524f6f7c4d"
+        }
+      ],
       "apiCallIds": [],
       "favorite": true,
       "implementedBy": []
@@ -227,6 +248,11 @@
       "id": "8f4cb436-42b7-495c-8dde-457d81cf5ca0"
     },
     {
+      "name": "Confirm Extracted Data from TPI",
+      "description": "",
+      "id": "9310f6c0-03b6-40a0-a521-b94acc0c5beb"
+    },
+    {
       "id": "95cb1f78-9ae8-4b29-a073-325a9f021e5b",
       "repoId": "",
       "name": "Display Upcoming Services",
@@ -285,6 +311,11 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Confirm TPI Search Result",
+      "description": "",
+      "id": "a7d52411-9420-4c45-b2eb-74a0d5e4c4e5"
     },
     {
       "id": "af8d2d31-948c-44cc-91b4-eb95b800174e",
@@ -380,6 +411,16 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Update Order",
+      "description": "",
+      "id": "e509917e-acbb-494f-881d-0d524f6f7c4d"
+    },
+    {
+      "name": "Extract Data From TPI",
+      "description": "",
+      "id": "f1f108c0-ed0a-49bc-b662-76a7057382c2"
     },
     {
       "id": "f827c076-9a68-4b24-8dbf-99d942f199b3",
