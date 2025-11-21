@@ -125,6 +125,9 @@
       "role": 0,
       "steps": [
         {
+          "processReference": "793e0aea-b6db-4bbf-88d9-79f2bd9718c6"
+        },
+        {
           "processReference": "f8fe1986-156f-4b23-88ec-8aa0596f9441"
         },
         {
@@ -368,6 +371,9 @@
       ],
       "role": 0,
       "steps": [
+        {
+          "processReference": "793e0aea-b6db-4bbf-88d9-79f2bd9718c6"
+        },
         {
           "processReference": "56fa8c8a-aef5-4eab-a004-833da37297e2"
         },
@@ -895,80 +901,10 @@
             "id": "grp_5skdm39",
             "type": "group",
             "label": "Contact",
-            "x": 534.1999998092651,
-            "y": -194.60000610351562,
-            "width": 2351.6343885404385,
-            "height": 677
-          },
-          {
-            "id": "proc_md0afs5",
-            "type": "process",
-            "label": "Guided Order Creation",
-            "x": 852.1999998092651,
-            "y": 263.3999938964844,
-            "width": 166,
-            "height": 60,
-            "processId": "793e0aea-b6db-4bbf-88d9-79f2bd9718c6"
-          },
-          {
-            "id": "proc_m0yug61",
-            "type": "process",
-            "label": "Appointment Booking",
-            "x": 1024.1999998092651,
-            "y": -65.60000610351562,
-            "width": 164,
-            "height": 60,
-            "processId": "7b6ed73d-88e4-4661-923d-ffcfde5481d3"
-          },
-          {
-            "id": "proc_sjlmzs6",
-            "type": "process",
-            "label": "Inform Customer about Offer",
-            "x": 1130.1999998092651,
-            "y": 112.39999389648438,
-            "width": 218,
-            "height": 60,
-            "processId": "974d6611-2858-4902-9715-caa05e0618ad"
-          },
-          {
-            "id": "proc_f8ceqnt",
-            "type": "process",
-            "label": "Digital Payment",
-            "x": 1308.1999998092651,
-            "y": -56.600006103515625,
-            "width": 120,
-            "height": 60,
-            "processId": "c78e1107-c788-458d-b9df-e657c2f980af"
-          },
-          {
-            "id": "proc_qygoe31",
-            "type": "process",
-            "label": "Confirmed Order",
-            "x": 1440.1999998092651,
-            "y": 145.39999389648438,
-            "width": 120,
-            "height": 60,
-            "processId": "b65df90b-345d-4c37-a4f7-21bb8ff6c4ad"
-          },
-          {
-            "id": "proc_e6l0cml",
-            "type": "process",
-            "label": "Determine Repair Type",
-            "x": 1614.1999998092651,
-            "y": 144.39999389648438,
-            "width": 192,
-            "height": 60,
-            "processId": "e2173398-6f88-407d-b8a5-671c81a8356c"
-          },
-          {
-            "id": "proc_3bocm6v",
-            "type": "process",
-            "label": "Remote Repair",
-            "x": 1834.000507509113,
-            "y": -165.22002252666164,
-            "width": 215.47678064904153,
-            "height": 60,
-            "processId": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a"
+            "x": 358.1646854875953,
+            "y": -333.33970298415375,
+            "width": 2527.6697028621084,
+            "height": 802.3132746018666
           },
           {
             "id": "grp_pugc95p",
@@ -1013,7 +949,7 @@
             "type": "process",
             "label": "Customer Lead",
             "x": -527.3569867886349,
-            "y": 185.7239840191096,
+            "y": 187.21580871675084,
             "width": 266.19882036884457,
             "height": 60,
             "processId": "681d7fc2-0988-4ad7-a90d-2b59e149e82e"
@@ -1022,8 +958,8 @@
             "id": "proc_yhmonmk",
             "type": "process",
             "label": "Lead Processing",
-            "x": -137.99074070426337,
-            "y": 217.05230266957628,
+            "x": -126.05614312313321,
+            "y": 236.4460237389128,
             "width": 328.8554576697779,
             "height": 60,
             "processId": "5be972b9-7c7a-438b-aeb8-334b98f6bbf3"
@@ -1033,7 +969,7 @@
             "type": "process",
             "label": "Customer Call",
             "x": -525.8651620909935,
-            "y": 258.8233942035318,
+            "y": 293.135362249281,
             "width": 258.73969688063806,
             "height": 60,
             "processId": "750a232c-95e1-4d14-a970-a77105364e31"
@@ -1042,8 +978,8 @@
             "id": "dec_hrutcec",
             "type": "decision",
             "label": "Booked Appointment",
-            "x": 169.58675668531768,
-            "y": 69.45976123139522,
+            "x": 272.5226608225654,
+            "y": 72.44341062667776,
             "width": 24,
             "height": 24
           },
@@ -1051,59 +987,72 @@
             "id": "grp_qr7y312",
             "type": "group",
             "label": "Customer Trigger",
-            "x": -553.9305645098636,
-            "y": 93.06734671817625,
+            "x": -558.4060386027875,
+            "y": 107.98559369458894,
             "width": 325.31327460186674,
-            "height": 349.74100343675565
+            "height": 336.3145811579842
+          },
+          {
+            "id": "proc_l4nbntr",
+            "type": "process",
+            "label": "Digital Service Station",
+            "x": 1080.8300372686547,
+            "y": 8.196844999798365,
+            "width": 173.70568911508576,
+            "height": 60,
+            "processId": "d652e206-61b9-4b95-8670-78cdd05bcf60"
+          },
+          {
+            "id": "proc_mfetu1h",
+            "type": "process",
+            "label": "Pre Check-In",
+            "x": 621.3480303951434,
+            "y": 58.918884719601564,
+            "width": 155.80379274339055,
+            "height": 60,
+            "processId": "85be88b5-1edb-4ef7-9b2c-0a078b82f9b1"
+          },
+          {
+            "id": "proc_pdobgkq",
+            "type": "process",
+            "label": "Dialog Reception",
+            "x": 1080.8300372686545,
+            "y": 97.70632685827464,
+            "width": 173.70568911508576,
+            "height": 60,
+            "processId": "fdf525cf-e637-45d3-a92b-fe7f3d88b293"
+          },
+          {
+            "id": "proc_kxl72a6",
+            "type": "process",
+            "label": "Remote Repair",
+            "x": 1079.3382125710136,
+            "y": -261.8234252732716,
+            "width": 291.5598402287461,
+            "height": 60,
+            "processId": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a"
+          },
+          {
+            "id": "proc_aqy2ugy",
+            "type": "process",
+            "label": "Determine Repair Type",
+            "x": 376.688779981975,
+            "y": 55.935235324319024,
+            "width": 169.23021502216193,
+            "height": 60,
+            "processId": "e2173398-6f88-407d-b8a5-671c81a8356c"
+          },
+          {
+            "id": "dec_j83dw2o",
+            "type": "decision",
+            "label": "On-Site Repair",
+            "x": 890.1380856460513,
+            "y": 75.4270600219603,
+            "width": 24,
+            "height": 24
           }
         ],
         "edges": [
-          {
-            "id": "e_2yw8qk6",
-            "from": "proc_m0yug61",
-            "to": "proc_md0afs5"
-          },
-          {
-            "id": "e_wkahvnh",
-            "from": "proc_md0afs5",
-            "to": "proc_sjlmzs6",
-            "label": "If Dealer Iniiated"
-          },
-          {
-            "id": "e_0o987qw",
-            "from": "proc_m0yug61",
-            "to": "proc_f8ceqnt"
-          },
-          {
-            "id": "e_7lnjx2n",
-            "from": "proc_m0yug61",
-            "to": "proc_qygoe31"
-          },
-          {
-            "id": "e_7axfbwx",
-            "from": "proc_f8ceqnt",
-            "to": "proc_qygoe31"
-          },
-          {
-            "id": "e_v6z6uup",
-            "from": "proc_sjlmzs6",
-            "to": "proc_qygoe31"
-          },
-          {
-            "id": "e_verwxax",
-            "from": "proc_md0afs5",
-            "to": "proc_qygoe31"
-          },
-          {
-            "id": "e_46ijsx0",
-            "from": "proc_qygoe31",
-            "to": "proc_e6l0cml"
-          },
-          {
-            "id": "e_z68hvdw",
-            "from": "proc_e6l0cml",
-            "to": "proc_3bocm6v"
-          },
           {
             "id": "e_x3wmdpd",
             "from": "proc_932m0i5",
@@ -1138,10 +1087,40 @@
             "id": "e_ibckpmn",
             "from": "proc_uon41qe",
             "to": "proc_xpukqh8"
+          },
+          {
+            "id": "e_s0n5tls",
+            "from": "dec_j83dw2o",
+            "to": "proc_l4nbntr"
+          },
+          {
+            "id": "e_kgzwr8s",
+            "from": "dec_j83dw2o",
+            "to": "proc_pdobgkq"
+          },
+          {
+            "id": "e_fhdc9f4",
+            "from": "dec_hrutcec",
+            "to": "proc_aqy2ugy"
+          },
+          {
+            "id": "e_fyo72nv",
+            "from": "proc_aqy2ugy",
+            "to": "proc_mfetu1h"
+          },
+          {
+            "id": "e_7ua9geh",
+            "from": "proc_mfetu1h",
+            "to": "dec_j83dw2o"
+          },
+          {
+            "id": "e_xs4bs2v",
+            "from": "dec_j83dw2o",
+            "to": "proc_kxl72a6"
           }
         ],
-        "panX": 495.2787568992354,
-        "panY": 398.39588910131897,
+        "panX": 777.2787568992354,
+        "panY": 414.39588910131897,
         "zoom": 0.6703200460356392
       }
     }
