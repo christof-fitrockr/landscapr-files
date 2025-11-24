@@ -79,6 +79,14 @@
       "implementedBy": []
     },
     {
+      "name": "Notification for Check-In",
+      "description": "",
+      "id": "4477b0ea-bc30-446a-ab26-8a22c1e621de",
+      "apiCallIds": [
+        "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+      ]
+    },
+    {
       "id": "45687cff-90e4-492b-9de8-a7f6eac2f876",
       "repoId": "",
       "name": "Campaign",
@@ -124,6 +132,15 @@
       "favorite": true,
       "apiCallIds": [
         "302f9fe7-e279-4c99-b332-6006538e91ee"
+      ]
+    },
+    {
+      "name": "Personal Data Verification",
+      "description": "",
+      "id": "4e07a7bf-628b-427e-a9f1-acd52e631345",
+      "apiCallIds": [
+        "3a16b383-f55d-40b7-84ff-094e87a9e016",
+        "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
       ]
     },
     {
@@ -200,6 +217,15 @@
       "id": "6276cacf-5245-41be-a292-8e79a34d0d67"
     },
     {
+      "name": "Additional Offers",
+      "description": "",
+      "id": "646026d1-c905-4bca-abc3-50772803c90c",
+      "apiCallIds": [
+        "3cb95067-6006-45f2-ae16-047bd80973b0",
+        "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ]
+    },
+    {
       "id": "6731c039-7f00-492d-81d5-60159eed011b",
       "repoId": "",
       "name": "Buy Accessories",
@@ -243,6 +269,11 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Check-In Summary",
+      "description": "",
+      "id": "71b78b3d-7a94-4738-9ae1-8caa9dc1cd13"
     },
     {
       "id": "750a232c-95e1-4d14-a970-a77105364e31",
@@ -384,7 +415,29 @@
       "output": "",
       "tags": [],
       "role": 0,
-      "steps": [],
+      "steps": [
+        {
+          "processReference": "4477b0ea-bc30-446a-ab26-8a22c1e621de"
+        },
+        {
+          "processReference": "4e07a7bf-628b-427e-a9f1-acd52e631345"
+        },
+        {
+          "processReference": "9359de8f-fe72-433f-976a-c20c92e5dec1"
+        },
+        {
+          "processReference": "bc283705-410e-41e9-a565-0eb5319f7f4b"
+        },
+        {
+          "processReference": "646026d1-c905-4bca-abc3-50772803c90c"
+        },
+        {
+          "processReference": "9ee56150-9c34-43be-8ec2-f4fde87f0557"
+        },
+        {
+          "processReference": "71b78b3d-7a94-4738-9ae1-8caa9dc1cd13"
+        }
+      ],
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
@@ -425,6 +478,15 @@
       "name": "Confirm Extracted Data from TPI",
       "description": "",
       "id": "9310f6c0-03b6-40a0-a521-b94acc0c5beb"
+    },
+    {
+      "name": "Service Event Data Verification",
+      "description": "",
+      "id": "9359de8f-fe72-433f-976a-c20c92e5dec1",
+      "apiCallIds": [
+        "3a16b383-f55d-40b7-84ff-094e87a9e016",
+        "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ]
     },
     {
       "id": "95cb1f78-9ae8-4b29-a073-325a9f021e5b",
@@ -506,6 +568,14 @@
       "implementedBy": []
     },
     {
+      "name": "Digital Signature / Confirmation",
+      "description": "",
+      "id": "9ee56150-9c34-43be-8ec2-f4fde87f0557",
+      "apiCallIds": [
+        "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ]
+    },
+    {
       "id": "a01b61cf-11cd-4c70-9508-80db1fb2cddd",
       "repoId": null,
       "name": "App or Portal",
@@ -567,6 +637,15 @@
       "name": "Information about corresponding offer",
       "description": "Package and Price estimate",
       "id": "b85f62d9-b152-470b-8ea4-571e3a580236"
+    },
+    {
+      "name": "Additional Comments",
+      "description": "",
+      "id": "bc283705-410e-41e9-a565-0eb5319f7f4b",
+      "apiCallIds": [
+        "3a16b383-f55d-40b7-84ff-094e87a9e016",
+        "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ]
     },
     {
       "id": "bcdf565f-dfdd-44f4-be7b-35682a658100",
@@ -721,6 +800,21 @@
   ],
   "apiCalls": [
     {
+      "name": "updatePersonalDataOfAppointment",
+      "description": "",
+      "id": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
+    },
+    {
+      "name": "pushUserNotification",
+      "description": "",
+      "id": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+    },
+    {
+      "name": "getAppointmentById",
+      "description": "",
+      "id": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+    },
+    {
       "name": "getProductCataloge",
       "description": "",
       "implementationStatus": 0,
@@ -785,6 +879,11 @@
       "output": "Booking Confirmation",
       "repoId": null,
       "id": "8cdc1058-83a0-481d-a0ca-4003f89e5a85"
+    },
+    {
+      "name": "updateAppointment",
+      "description": "",
+      "id": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
     },
     {
       "name": "getDealerForCustomer",
@@ -1435,8 +1534,8 @@
             "to": "proc_n4xyufg"
           }
         ],
-        "panX": -790.6699780535673,
-        "panY": 332.27500269297497,
+        "panX": 321.3300219464327,
+        "panY": 380.27500269297497,
         "zoom": 0.6703200460356392
       }
     }
