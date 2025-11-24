@@ -23,7 +23,10 @@
     {
       "name": "Select Services",
       "description": "",
-      "id": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6"
+      "id": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6",
+      "apiCallIds": [
+        "3cb95067-6006-45f2-ae16-047bd80973b0"
+      ]
     },
     {
       "name": "Customer Contact",
@@ -63,7 +66,7 @@
     {
       "name": "Appt Booking",
       "status": 0,
-      "description": "eäfkeapöfqemr",
+      "description": "eÃ¤fkeapÃ¶fqemr",
       "input": "",
       "output": "",
       "tags": null,
@@ -92,6 +95,21 @@
       "apiCallIds": [
         "302f9fe7-e279-4c99-b332-6006538e91ee"
       ]
+    },
+    {
+      "id": "4f6760f7-3373-4749-95bb-c30f79477eb8",
+      "repoId": "",
+      "name": "Repair Preparation",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
     },
     {
       "id": "563d4493-e414-43c0-9528-a9f3014cf051",
@@ -306,7 +324,10 @@
     {
       "name": "Select Dealer",
       "description": "",
-      "id": "803fa9a2-4b04-4c6c-be84-3283695b4dc3"
+      "id": "803fa9a2-4b04-4c6c-be84-3283695b4dc3",
+      "apiCallIds": [
+        "3fb3e3db-54d6-42b5-9e6c-37be4cb9d296"
+      ]
     },
     {
       "id": "811f9359-9797-4671-9086-37ce831f48e9",
@@ -339,6 +360,21 @@
       "implementedBy": []
     },
     {
+      "id": "87165ddd-6bcd-4984-8ecd-c363b126ca9e",
+      "repoId": "",
+      "name": "Order Extension",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
       "name": "Select Service",
       "description": "",
       "id": "8a4262fe-504d-49f9-8703-86b59b7630dc",
@@ -350,7 +386,10 @@
     {
       "name": "Select Appointment Slots",
       "description": "",
-      "id": "8f4cb436-42b7-495c-8dde-457d81cf5ca0"
+      "id": "8f4cb436-42b7-495c-8dde-457d81cf5ca0",
+      "apiCallIds": [
+        "63b446d0-d75c-4d35-bbd9-048f45ec3b20"
+      ]
     },
     {
       "name": "Confirm Extracted Data from TPI",
@@ -459,7 +498,10 @@
     {
       "name": "Book Appointment",
       "description": "",
-      "id": "b3e56e27-ecd5-4c5c-beb0-2ad5ab9df7aa"
+      "id": "b3e56e27-ecd5-4c5c-beb0-2ad5ab9df7aa",
+      "apiCallIds": [
+        "8cdc1058-83a0-481d-a0ca-4003f89e5a85"
+      ]
     },
     {
       "id": "b65df90b-345d-4c37-a4f7-21bb8ff6c4ad",
@@ -485,6 +527,21 @@
       "id": "bcdf565f-dfdd-44f4-be7b-35682a658100",
       "repoId": "",
       "name": "Vehicle Issue",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "c178f47a-5839-495e-bb35-44ac001b277c",
+      "repoId": "",
+      "name": "Repair Execution",
       "description": "",
       "status": 0,
       "input": "",
@@ -619,6 +676,22 @@
   ],
   "apiCalls": [
     {
+      "name": "getProductCataloge",
+      "description": "",
+      "implementationStatus": 0,
+      "implementationType": 2,
+      "status": 0,
+      "capabilityId": "",
+      "apiGroup": "Products",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "Customer, Vehicle, Situation, Dealer",
+      "output": "Grouped List of Products",
+      "repoId": null,
+      "id": "3cb95067-6006-45f2-ae16-047bd80973b0"
+    },
+    {
       "name": "getDealerById",
       "description": "",
       "id": "3fb3e3db-54d6-42b5-9e6c-37be4cb9d296",
@@ -635,6 +708,38 @@
       "input": "",
       "output": "",
       "repoId": null
+    },
+    {
+      "name": "getFreeAppointmentSlots",
+      "description": "",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "Dealer, Selected Services",
+      "output": "Free Appointments",
+      "repoId": null,
+      "id": "63b446d0-d75c-4d35-bbd9-048f45ec3b20"
+    },
+    {
+      "name": "bookAppointment",
+      "description": "",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "Selected Services, Appointment, CustomerId, Vin, Dealer",
+      "output": "Booking Confirmation",
+      "repoId": null,
+      "id": "8cdc1058-83a0-481d-a0ca-4003f89e5a85"
     },
     {
       "name": "getDealerForCustomer",
@@ -900,10 +1005,10 @@
           {
             "id": "grp_5skdm39",
             "type": "group",
-            "label": "Contact",
-            "x": 358.1646854875953,
+            "label": "Check-In",
+            "x": 359.6565101852366,
             "y": -333.33970298415375,
-            "width": 2527.6697028621084,
+            "width": 1092.5343437312058,
             "height": 802.3132746018666
           },
           {
@@ -996,8 +1101,8 @@
             "id": "proc_l4nbntr",
             "type": "process",
             "label": "Digital Service Station",
-            "x": 1080.8300372686547,
-            "y": 8.196844999798365,
+            "x": 1221.0615588469345,
+            "y": -124.57555309027472,
             "width": 173.70568911508576,
             "height": 60,
             "processId": "d652e206-61b9-4b95-8670-78cdd05bcf60"
@@ -1016,8 +1121,8 @@
             "id": "proc_pdobgkq",
             "type": "process",
             "label": "Dialog Reception",
-            "x": 1080.8300372686545,
-            "y": 97.70632685827464,
+            "x": 1221.0615588469338,
+            "y": -11.196876069538106,
             "width": 173.70568911508576,
             "height": 60,
             "processId": "fdf525cf-e637-45d3-a92b-fe7f3d88b293"
@@ -1026,8 +1131,8 @@
             "id": "proc_kxl72a6",
             "type": "process",
             "label": "Remote Repair",
-            "x": 1079.3382125710136,
-            "y": -261.8234252732716,
+            "x": 1492.5736538176457,
+            "y": 370.7102465266271,
             "width": 291.5598402287461,
             "height": 60,
             "processId": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a"
@@ -1050,6 +1155,55 @@
             "y": 75.4270600219603,
             "width": 24,
             "height": 24
+          },
+          {
+            "id": "grp_wxt7z5s",
+            "type": "group",
+            "label": "Execution",
+            "x": 1463.0164267011344,
+            "y": -332.10269210958586,
+            "width": 1063.7664999342958,
+            "height": 800.2720621244193
+          },
+          {
+            "id": "proc_hxebudi",
+            "type": "process",
+            "label": "Appointment/Order Status Tracking",
+            "x": 903.3028982493437,
+            "y": -285.6926204355319,
+            "width": 1593.9228012695753,
+            "height": 60,
+            "processId": "f1a3dfe1-9421-421e-95ae-93bc0258082f"
+          },
+          {
+            "id": "proc_42yrtur",
+            "type": "process",
+            "label": "Repair Execution",
+            "x": 1746.1838524166617,
+            "y": -9.705051371896854,
+            "width": 604.8430267334127,
+            "height": 60,
+            "processId": "c178f47a-5839-495e-bb35-44ac001b277c"
+          },
+          {
+            "id": "proc_i73xqkf",
+            "type": "process",
+            "label": "Repair Preparation",
+            "x": 1224.0452082422166,
+            "y": 121.57552202053492,
+            "width": 485.4970509221114,
+            "height": 60,
+            "processId": "4f6760f7-3373-4749-95bb-c30f79477eb8"
+          },
+          {
+            "id": "proc_gcfcdnh",
+            "type": "process",
+            "label": "Order Extension",
+            "x": 1938.55275994885,
+            "y": -191.5273231545551,
+            "width": 242.32962520658384,
+            "height": 60,
+            "processId": "87165ddd-6bcd-4984-8ecd-c363b126ca9e"
           }
         ],
         "edges": [
@@ -1117,10 +1271,40 @@
             "id": "e_xs4bs2v",
             "from": "dec_j83dw2o",
             "to": "proc_kxl72a6"
+          },
+          {
+            "id": "e_67rtflw",
+            "from": "proc_l4nbntr",
+            "to": "proc_42yrtur"
+          },
+          {
+            "id": "e_bzvywvr",
+            "from": "proc_pdobgkq",
+            "to": "proc_42yrtur"
+          },
+          {
+            "id": "e_y59bcnm",
+            "from": "dec_j83dw2o",
+            "to": "proc_i73xqkf"
+          },
+          {
+            "id": "e_4g29ifu",
+            "from": "proc_i73xqkf",
+            "to": "proc_42yrtur"
+          },
+          {
+            "id": "e_hgtbvbh",
+            "from": "proc_42yrtur",
+            "to": "proc_gcfcdnh"
+          },
+          {
+            "id": "e_wujvoew",
+            "from": "proc_gcfcdnh",
+            "to": "proc_42yrtur"
           }
         ],
-        "panX": 777.2787568992354,
-        "panY": 414.39588910131897,
+        "panX": 358.3300219464327,
+        "panY": 300.27500269297497,
         "zoom": 0.6703200460356392
       }
     }
