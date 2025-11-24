@@ -1,6 +1,21 @@
 {
   "processes": [
     {
+      "id": "02f4ff59-7ba7-4a78-9d52-82e49de08f0d",
+      "repoId": "",
+      "name": "Check-Out by Service Advisor",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
       "name": "Confirmation",
       "description": "",
       "id": "030a476e-00ea-4923-91bc-785a33e95e02"
@@ -27,6 +42,21 @@
       "apiCallIds": [
         "3cb95067-6006-45f2-ae16-047bd80973b0"
       ]
+    },
+    {
+      "id": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b",
+      "repoId": "",
+      "name": "Check-Out with Digital Service Station",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
     },
     {
       "name": "Customer Contact",
@@ -449,6 +479,21 @@
       "id": "974d6611-2858-4902-9715-caa05e0618ad",
       "repoId": "",
       "name": "Inform Customer about Offer",
+      "description": "",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [],
+      "role": 0,
+      "steps": [],
+      "apiCallIds": [],
+      "favorite": false,
+      "implementedBy": []
+    },
+    {
+      "id": "9cdcf664-e36c-459a-99bb-8cec2cd64d7e",
+      "repoId": "",
+      "name": "Feedback Invite",
       "description": "",
       "status": 0,
       "input": "",
@@ -1162,7 +1207,7 @@
             "label": "Execution",
             "x": 1463.0164267011344,
             "y": -332.10269210958586,
-            "width": 1063.7664999342958,
+            "width": 1224.8835672795528,
             "height": 800.2720621244193
           },
           {
@@ -1199,11 +1244,68 @@
             "id": "proc_gcfcdnh",
             "type": "process",
             "label": "Order Extension",
-            "x": 1938.55275994885,
-            "y": -191.5273231545551,
+            "x": 1928.109987065361,
+            "y": -181.0845502710662,
             "width": 242.32962520658384,
             "height": 60,
             "processId": "87165ddd-6bcd-4984-8ecd-c363b126ca9e"
+          },
+          {
+            "id": "dec_hiitpqc",
+            "type": "decision",
+            "label": "Repair finished.",
+            "x": 2537.036073378479,
+            "y": 8.475289957679873,
+            "width": 24,
+            "height": 24
+          },
+          {
+            "id": "grp_o4rrv7f",
+            "type": "group",
+            "label": "Check-Out",
+            "x": 2702.6462719774954,
+            "y": -331.9223507800091,
+            "width": 511.7913618070256,
+            "height": 800.2720621244193
+          },
+          {
+            "id": "proc_26x6wsk",
+            "type": "process",
+            "label": "Check-Out with Digital Service Station",
+            "x": 2824.696630347765,
+            "y": -100.52601659843762,
+            "width": 310.9535612980826,
+            "height": 60,
+            "processId": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b"
+          },
+          {
+            "id": "proc_cmprbjw",
+            "type": "process",
+            "label": "Check-Out by Service Advisor",
+            "x": 2827.680279743048,
+            "y": 87.44389530436246,
+            "width": 318.412684786289,
+            "height": 60,
+            "processId": "02f4ff59-7ba7-4a78-9d52-82e49de08f0d"
+          },
+          {
+            "id": "grp_vm9km9x",
+            "type": "group",
+            "label": "Usage",
+            "x": 3229.260390244864,
+            "y": -336.397824872933,
+            "width": 493.8894654353303,
+            "height": 804.7475362173432
+          },
+          {
+            "id": "proc_n4xyufg",
+            "type": "process",
+            "label": "Feedback Invite",
+            "x": 3330.4252028481565,
+            "y": -11.016534739961394,
+            "width": 234.8705017183779,
+            "height": 60,
+            "processId": "9cdcf664-e36c-459a-99bb-8cec2cd64d7e"
           }
         ],
         "edges": [
@@ -1301,10 +1403,40 @@
             "id": "e_wujvoew",
             "from": "proc_gcfcdnh",
             "to": "proc_42yrtur"
+          },
+          {
+            "id": "e_ucgbaov",
+            "from": "proc_42yrtur",
+            "to": "dec_hiitpqc"
+          },
+          {
+            "id": "e_pqp7ltp",
+            "from": "proc_kxl72a6",
+            "to": "dec_hiitpqc"
+          },
+          {
+            "id": "e_llfurgo",
+            "from": "dec_hiitpqc",
+            "to": "proc_26x6wsk"
+          },
+          {
+            "id": "e_kp5fo8w",
+            "from": "dec_hiitpqc",
+            "to": "proc_cmprbjw"
+          },
+          {
+            "id": "e_krzw17m",
+            "from": "proc_cmprbjw",
+            "to": "proc_n4xyufg"
+          },
+          {
+            "id": "e_m40twhw",
+            "from": "proc_26x6wsk",
+            "to": "proc_n4xyufg"
           }
         ],
-        "panX": 358.3300219464327,
-        "panY": 300.27500269297497,
+        "panX": -790.6699780535673,
+        "panY": 332.27500269297497,
         "zoom": 0.6703200460356392
       }
     }
