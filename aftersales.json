@@ -854,10 +854,12 @@
       "implementationStatus": "",
       "implementationType": "",
       "status": 0,
-      "capabilityId": "",
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
       "apiGroup": "Order",
       "documentation": "",
-      "implementedBy": null,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
       "tags": null,
       "input": "Dealer, Selected Services",
       "output": "Free Appointments",
@@ -1036,6 +1038,16 @@
       "name": "OrMa",
       "description": "",
       "id": "9135bbfa-bbd5-41b2-b327-580e3b199493"
+    },
+    {
+      "name": "SBO",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "",
+      "id": "a072db68-46c7-4235-9194-8d039a178a12"
     },
     {
       "name": "GVF",
