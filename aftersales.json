@@ -37,11 +37,20 @@
     },
     {
       "name": "Select Services",
-      "description": "",
+      "description": "This step shows the products (Maintenance, Accessories, Central or Local Packages) in a structured way to the Customer. The customer can select from the catalog and the selected items are added to the appointment.",
       "id": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6",
       "apiCallIds": [
         "3cb95067-6006-45f2-ae16-047bd80973b0"
-      ]
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null
     },
     {
       "id": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b",
@@ -380,12 +389,24 @@
       "implementedBy": []
     },
     {
-      "name": "Select Dealer",
-      "description": "",
+      "name": "Load Booking Details",
+      "description": "This process step prepares the online booking. It loads the details of the dealer, vehicle and customer and usually displays an overview of those entities to the user.",
       "id": "803fa9a2-4b04-4c6c-be84-3283695b4dc3",
       "apiCallIds": [
-        "3fb3e3db-54d6-42b5-9e6c-37be4cb9d296"
-      ]
+        "3fb3e3db-54d6-42b5-9e6c-37be4cb9d296",
+        "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70",
+        "e0575ec0-0183-484b-9cee-9621325b2c7d",
+        "994ff36f-a97b-4675-b68f-018dbd3cdb8d"
+      ],
+      "status": 0,
+      "input": "Dealer Id, Customer Id, Vehicle Id",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null
     },
     {
       "id": "811f9359-9797-4671-9086-37ce831f48e9",
@@ -465,11 +486,20 @@
     },
     {
       "name": "Select Appointment Slots",
-      "description": "",
+      "description": "Based on the current appointment configuration, free appointment slots are being loaded and shown to the customer",
       "id": "8f4cb436-42b7-495c-8dde-457d81cf5ca0",
       "apiCallIds": [
         "63b446d0-d75c-4d35-bbd9-048f45ec3b20"
-      ]
+      ],
+      "status": 0,
+      "input": "Vehicle, Customer, Dealer, Selected Products",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null
     },
     {
       "name": "Confirm Extracted Data from TPI",
@@ -811,17 +841,50 @@
     {
       "name": "updatePersonalDataOfAppointment",
       "description": "",
-      "id": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
+      "id": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "pushUserNotification",
       "description": "",
-      "id": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+      "id": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "",
+      "apiGroup": "Customer",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getAppointmentById",
       "description": "",
-      "id": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+      "id": "3a16b383-f55d-40b7-84ff-094e87a9e016",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getProductCataloge",
@@ -847,7 +910,7 @@
       "implementationType": "",
       "status": 0,
       "capabilityId": "",
-      "apiGroup": "",
+      "apiGroup": "Master Data",
       "documentation": "",
       "implementedBy": [
         "ea7e2c1c-2522-45a9-8357-713c333799a2"
@@ -863,7 +926,7 @@
       "implementationStatus": "",
       "implementationType": "",
       "status": 0,
-      "capabilityId": "",
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
       "apiGroup": "Order",
       "documentation": "",
       "implementedBy": null,
@@ -879,8 +942,8 @@
       "implementationStatus": "",
       "implementationType": "",
       "status": 0,
-      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
-      "apiGroup": "",
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
       "documentation": "",
       "implementedBy": null,
       "tags": null,
@@ -892,7 +955,18 @@
     {
       "name": "updateAppointment",
       "description": "",
-      "id": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      "id": "8f04d41d-b77d-45aa-83da-b4cf5164e386",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getDealerForCustomer",
@@ -924,7 +998,9 @@
       "input": "",
       "output": "",
       "repoId": null,
-      "id": "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70"
+      "id": "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70",
+      "apiGroup": "Vehicle",
+      "documentation": ""
     },
     {
       "name": "SBO - getServices",
@@ -941,6 +1017,22 @@
       "output": "List of Services",
       "repoId": null,
       "id": "c3058f1c-44bf-43a4-8adf-ecf9063c8248"
+    },
+    {
+      "name": "getCustomerById",
+      "description": "",
+      "id": "e0575ec0-0183-484b-9cee-9621325b2c7d",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "",
+      "apiGroup": "Customer",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     }
   ],
   "capabilities": [
@@ -1596,10 +1688,11 @@
             "to": "dec_hrutcec"
           }
         ],
-        "panX": 528.5159914843371,
-        "panY": 184.30308818630203,
-        "zoom": 0.9091248049106129
-      }
+        "panX": 580.5159914843371,
+        "panY": 410.30308818630203,
+        "zoom": 0.9091248049106128
+      },
+      "comments": []
     }
   ]
 }
