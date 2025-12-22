@@ -300,12 +300,15 @@
       "id": "793e0aea-b6db-4bbf-88d9-79f2bd9718c6",
       "repoId": null,
       "name": "Guided Order Creation",
-      "description": "",
+      "description": "Guided Order Creation creates an order from a customer statement using the technical documentation of a vehicle",
       "status": 0,
-      "input": "",
-      "output": "",
-      "tags": [],
-      "role": 0,
+      "input": "Customer Statement, Vehicle Information and Vehicle Condition",
+      "output": "Order",
+      "tags": [
+        "AI",
+        "One.Frontend"
+      ],
+      "role": 3,
       "steps": [
         {
           "processReference": "6276cacf-5245-41be-a292-8e79a34d0d67"
@@ -323,7 +326,10 @@
           "processReference": "e509917e-acbb-494f-881d-0d524f6f7c4d"
         }
       ],
-      "apiCallIds": [],
+      "apiCallIds": [
+        "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70",
+        "92d2945f-d7ef-4c2f-a0a4-3bc4ea420640"
+      ],
       "favorite": true,
       "implementedBy": []
     },
@@ -346,11 +352,14 @@
       "id": "7b6ed73d-88e4-4661-923d-ffcfde5481d3",
       "repoId": null,
       "name": "Appointment Booking",
-      "description": "",
+      "description": "The appointment booking process is executed by a customer to book a service appointment at a dealership",
       "status": 0,
       "input": "",
       "output": "",
-      "tags": [],
+      "tags": [
+        "App",
+        "HMI"
+      ],
       "role": 0,
       "steps": [
         {
@@ -371,7 +380,9 @@
       ],
       "apiCallIds": [],
       "favorite": true,
-      "implementedBy": []
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ]
     },
     {
       "id": "7f951175-e9c5-44a9-8662-98c2a7327c66",
@@ -524,7 +535,7 @@
       "input": "",
       "output": "",
       "tags": [
-        "APP",
+        "App",
         "HMI"
       ],
       "role": 0,
@@ -963,6 +974,24 @@
       "apiGroup": "Order",
       "documentation": "",
       "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
+    },
+    {
+      "name": "getVehicleConditionDataByVin",
+      "description": "",
+      "id": "92d2945f-d7ef-4c2f-a0a4-3bc4ea420640",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "72b56f49-9e42-491f-b0fa-acc307ea7478",
+      "apiGroup": "Vehicle",
+      "documentation": "",
+      "implementedBy": [
+        "69c70866-f556-4708-9dce-d68fa0c58601"
+      ],
       "tags": null,
       "input": "",
       "output": "",
