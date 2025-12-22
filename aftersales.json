@@ -197,9 +197,6 @@
         },
         {
           "processReference": "35ea4d4b-bd41-4b25-87cb-0521697b1d23"
-        },
-        {
-          "processReference": "7b6ed73d-88e4-4661-923d-ffcfde5481d3"
         }
       ],
       "apiCallIds": [],
@@ -510,12 +507,6 @@
         },
         {
           "processReference": "b85f62d9-b152-470b-8ea4-571e3a580236"
-        },
-        {
-          "processReference": "7b6ed73d-88e4-4661-923d-ffcfde5481d3"
-        },
-        {
-          "processReference": "f1a3dfe1-9421-421e-95ae-93bc0258082f"
         }
       ],
       "apiCallIds": [],
@@ -800,6 +791,24 @@
   ],
   "apiCalls": [
     {
+      "name": "changeOrderProducts",
+      "description": "",
+      "id": "163fa758-5858-48d8-9e6e-d26994c87228",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": [
+        "9135bbfa-bbd5-41b2-b327-580e3b199493"
+      ],
+      "tags": null,
+      "input": "OrderId, List of Labour, Part,...",
+      "output": "Updated Order",
+      "repoId": null
+    },
+    {
       "name": "updatePersonalDataOfAppointment",
       "description": "",
       "id": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
@@ -854,12 +863,10 @@
       "implementationStatus": "",
       "implementationType": "",
       "status": 0,
-      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "capabilityId": "",
       "apiGroup": "Order",
       "documentation": "",
-      "implementedBy": [
-        "a072db68-46c7-4235-9194-8d039a178a12"
-      ],
+      "implementedBy": null,
       "tags": null,
       "input": "Dealer, Selected Services",
       "output": "Free Appointments",
@@ -918,6 +925,22 @@
       "output": "",
       "repoId": null,
       "id": "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70"
+    },
+    {
+      "name": "SBO - getServices",
+      "description": "Loads a list of all services based on provided by the booking system to be shown to the user",
+      "implementationStatus": 3,
+      "implementationType": 1,
+      "status": 1,
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "Dealer, Brand, VIN",
+      "output": "List of Services",
+      "repoId": null,
+      "id": "c3058f1c-44bf-43a4-8adf-ecf9063c8248"
     }
   ],
   "capabilities": [
@@ -942,6 +965,9 @@
       "id": "58dbd784-f075-40cd-9106-785bd1a89607",
       "implementedBy": [
         "9135bbfa-bbd5-41b2-b327-580e3b199493"
+      ],
+      "childrenIds": [
+        "b3255c78-428c-474e-a7ef-f196f47d232f"
       ]
     },
     {
@@ -981,6 +1007,15 @@
       "parentId": "72b56f49-9e42-491f-b0fa-acc307ea7478",
       "repoId": null,
       "id": "98325fef-1eca-47a9-b652-2d7099d77c42"
+    },
+    {
+      "name": "Appointment Booking",
+      "status": 0,
+      "description": "",
+      "tags": null,
+      "parentId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "repoId": null,
+      "id": "b3255c78-428c-474e-a7ef-f196f47d232f"
     },
     {
       "name": "Dealer Data",
@@ -1162,8 +1197,8 @@
             "id": "grp_5skdm39",
             "type": "group",
             "label": "Check-In",
-            "x": 359.6565101852366,
-            "y": -333.33970298415375,
+            "x": 353.6892113946715,
+            "y": -337.8151770770776,
             "width": 1092.5343437312058,
             "height": 802.3132746018666
           },
@@ -1220,7 +1255,7 @@
             "type": "process",
             "label": "Lead Processing",
             "x": -126.05614312313321,
-            "y": 236.4460237389128,
+            "y": 234.80507775483755,
             "width": 328.8554576697779,
             "height": 60,
             "processId": "5be972b9-7c7a-438b-aeb8-334b98f6bbf3"
@@ -1267,7 +1302,7 @@
             "id": "proc_mfetu1h",
             "type": "process",
             "label": "Pre Check-In",
-            "x": 621.3480303951434,
+            "x": 619.7070844110681,
             "y": 58.918884719601564,
             "width": 155.80379274339055,
             "height": 60,
@@ -1417,6 +1452,16 @@
             "width": 234.8705017183779,
             "height": 60,
             "processId": "9cdcf664-e36c-459a-99bb-8cec2cd64d7e"
+          },
+          {
+            "id": "proc_4ia4bom",
+            "type": "process",
+            "label": "Appointment Booking",
+            "x": -2.111855472430662,
+            "y": 50.28530480743018,
+            "width": 198.76540723561226,
+            "height": 60,
+            "processId": "7b6ed73d-88e4-4661-923d-ffcfde5481d3"
           }
         ],
         "edges": [
@@ -1439,16 +1484,6 @@
             "id": "e_wpkb3jo",
             "from": "proc_npjq1tv",
             "to": "proc_yhmonmk"
-          },
-          {
-            "id": "e_3mbglo5",
-            "from": "proc_yhmonmk",
-            "to": "dec_hrutcec"
-          },
-          {
-            "id": "e_6w64tpx",
-            "from": "proc_xpukqh8",
-            "to": "dec_hrutcec"
           },
           {
             "id": "e_ibckpmn",
@@ -1544,11 +1579,26 @@
             "id": "e_m40twhw",
             "from": "proc_26x6wsk",
             "to": "proc_n4xyufg"
+          },
+          {
+            "id": "e_rits274",
+            "from": "proc_yhmonmk",
+            "to": "proc_4ia4bom"
+          },
+          {
+            "id": "e_ck3veka",
+            "from": "proc_xpukqh8",
+            "to": "proc_4ia4bom"
+          },
+          {
+            "id": "e_0ges3vw",
+            "from": "proc_4ia4bom",
+            "to": "dec_hrutcec"
           }
         ],
-        "panX": 321.3300219464327,
-        "panY": 380.27500269297497,
-        "zoom": 0.6703200460356392
+        "panX": 528.5159914843371,
+        "panY": 184.30308818630203,
+        "zoom": 0.9091248049106129
       }
     }
   ]
