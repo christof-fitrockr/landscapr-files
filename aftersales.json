@@ -111,9 +111,51 @@
       "id": "28a203d6-e606-4845-a2d6-a0da978fa6e6"
     },
     {
+      "name": "Drop Key in Locker",
+      "description": "The locker of the Key Station Hardware opens and the user leaves the key. After closing the locker, the customer gets informed about the Order Status change and the Dealer gets notified about the dropped key.",
+      "id": "292c98f8-bb4e-4266-a4d1-b038b47a7dfe",
+      "steps": [
+        {
+          "apiCallReference": "de6ae634-db87-486f-9b00-9a85453a95aa"
+        },
+        {
+          "apiCallReference": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a9818ac3-12bb-4002-8936-ce58ce29967f",
+        "9135bbfa-bbd5-41b2-b327-580e3b199493"
+      ],
+      "repoId": null
+    },
+    {
       "name": "Customer Contact",
       "description": "",
       "id": "35ea4d4b-bd41-4b25-87cb-0521697b1d23"
+    },
+    {
+      "name": "Confirm Order",
+      "description": "The customer reviews the final appointment/order and confirms it. The user provides a digital signature if the order was updated or if the pre check in was not used.",
+      "id": "372bfe46-362a-4e7e-81cc-b3b7451c83b5",
+      "steps": [
+        {
+          "apiCallReference": "de6ae634-db87-486f-9b00-9a85453a95aa"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a9818ac3-12bb-4002-8936-ce58ce29967f"
+      ],
+      "repoId": null
     },
     {
       "id": "3d37d771-e468-4817-8c7e-e777d3fbc754",
@@ -607,6 +649,28 @@
       "implementedBy": []
     },
     {
+      "name": "Enter Identifier (QR-Code/License)",
+      "description": "The customer scans a qr code or enters his appointment id or license plate (depending on the Digital Key Station Hardware)",
+      "id": "812ecf55-71cd-437b-8bd3-5c1d73f1170a",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a9818ac3-12bb-4002-8936-ce58ce29967f"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+        },
+        {
+          "apiCallReference": "e0575ec0-0183-484b-9cee-9621325b2c7d"
+        }
+      ]
+    },
+    {
       "id": "85be88b5-1edb-4ef7-9b2c-0a078b82f9b1",
       "repoId": null,
       "name": "Pre Check-In",
@@ -993,6 +1057,31 @@
       "implementedBy": []
     },
     {
+      "name": "Review Appointment/Order",
+      "description": "The details of the appointment/order are shown to the customer. The details should be editable.",
+      "id": "c7147884-5e30-4f14-8989-40921c94fcf4",
+      "steps": [
+        {
+          "apiCallReference": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+        },
+        {
+          "apiCallReference": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a9818ac3-12bb-4002-8936-ce58ce29967f"
+      ],
+      "repoId": null
+    },
+    {
       "id": "c78e1107-c788-458d-b9df-e657c2f980af",
       "repoId": "",
       "name": "Digital Payment",
@@ -1009,18 +1098,36 @@
     },
     {
       "id": "d652e206-61b9-4b95-8670-78cdd05bcf60",
-      "repoId": "",
+      "repoId": null,
       "name": "Digital Service Station",
-      "description": "",
+      "description": "The key drop off via the digital service station is conducted at a kiosk. It allows the customer to review his appointment/order to upsell and to leave the vehicle keys in a locker",
       "status": 0,
       "input": "",
       "output": "",
       "tags": [],
       "role": 0,
-      "steps": [],
+      "steps": [
+        {
+          "processReference": "812ecf55-71cd-437b-8bd3-5c1d73f1170a"
+        },
+        {
+          "processReference": "c7147884-5e30-4f14-8989-40921c94fcf4"
+        },
+        {
+          "processReference": "e894410e-318a-4a96-8949-2b7d1ddf9212"
+        },
+        {
+          "processReference": "372bfe46-362a-4e7e-81cc-b3b7451c83b5"
+        },
+        {
+          "processReference": "292c98f8-bb4e-4266-a4d1-b038b47a7dfe"
+        }
+      ],
       "apiCallIds": [],
       "favorite": false,
-      "implementedBy": []
+      "implementedBy": [
+        "a9818ac3-12bb-4002-8936-ce58ce29967f"
+      ]
     },
     {
       "id": "d67dc99b-b26b-4671-a975-5bb045e08c03",
@@ -1086,6 +1193,31 @@
       "name": "Select Options",
       "description": "",
       "id": "e7d1e8c4-2ae1-420f-861d-079a03a55465"
+    },
+    {
+      "name": "Add additional Offers/Products",
+      "description": "The Service Station displays additional Services and Offers. The customer can add one or more items and the Appointment/Order gets modified.",
+      "id": "e894410e-318a-4a96-8949-2b7d1ddf9212",
+      "steps": [
+        {
+          "apiCallReference": "3cb95067-6006-45f2-ae16-047bd80973b0"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        },
+        {
+          "apiCallReference": "de6ae634-db87-486f-9b00-9a85453a95aa"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a9818ac3-12bb-4002-8936-ce58ce29967f"
+      ],
+      "repoId": null
     },
     {
       "name": "Customer Response Notification",
@@ -1760,6 +1892,16 @@
       "tags": null,
       "systemCluster": "3rd Party System",
       "id": "a072db68-46c7-4235-9194-8d039a178a12"
+    },
+    {
+      "name": "Digital Service Station",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "3rd Party System",
+      "id": "a9818ac3-12bb-4002-8936-ce58ce29967f"
     },
     {
       "name": "GVF",
