@@ -111,6 +111,11 @@
       "id": "28a203d6-e606-4845-a2d6-a0da978fa6e6"
     },
     {
+      "name": "Reserve Workshop Equipment",
+      "description": "",
+      "id": "291a84cb-32e6-4712-aac9-6589bdb9ae28"
+    },
+    {
       "name": "Drop Key in Locker",
       "description": "The locker of the Key Station Hardware opens and the user leaves the key. After closing the locker, the customer gets informed about the Order Status change and the Dealer gets notified about the dropped key.",
       "id": "292c98f8-bb4e-4266-a4d1-b038b47a7dfe",
@@ -244,6 +249,11 @@
       "repoId": null
     },
     {
+      "name": "Book Mechanic",
+      "description": "",
+      "id": "477fa45b-51f9-4400-8d45-c46d408770c8"
+    },
+    {
       "name": "Online Payment",
       "status": 0,
       "description": "The customer pays the invoice online",
@@ -308,15 +318,28 @@
     },
     {
       "id": "4f6760f7-3373-4749-95bb-c30f79477eb8",
-      "repoId": "",
+      "repoId": null,
       "name": "Repair Preparation",
       "description": "",
       "status": 0,
       "input": "",
       "output": "",
       "tags": [],
-      "role": 0,
-      "steps": [],
+      "role": 3,
+      "steps": [
+        {
+          "processReference": "7a757dc9-09bd-4111-ac08-abcf50d9ebd4"
+        },
+        {
+          "processReference": "291a84cb-32e6-4712-aac9-6589bdb9ae28"
+        },
+        {
+          "processReference": "477fa45b-51f9-4400-8d45-c46d408770c8"
+        },
+        {
+          "processReference": "c0d9f0f4-851a-412e-8af0-b58d54337d29"
+        }
+      ],
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
@@ -522,12 +545,6 @@
       "role": 3,
       "steps": [
         {
-          "processReference": "6276cacf-5245-41be-a292-8e79a34d0d67"
-        },
-        {
-          "processReference": "a7d52411-9420-4c45-b2eb-74a0d5e4c4e5"
-        },
-        {
           "processReference": "f1f108c0-ed0a-49bc-b662-76a7057382c2"
         },
         {
@@ -558,6 +575,11 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Review Order",
+      "description": "",
+      "id": "7a757dc9-09bd-4111-ac08-abcf50d9ebd4"
     },
     {
       "id": "7b6ed73d-88e4-4661-923d-ffcfde5481d3",
@@ -1042,6 +1064,18 @@
       "implementedBy": []
     },
     {
+      "name": "Parts availablility",
+      "description": "",
+      "id": "c0d9f0f4-851a-412e-8af0-b58d54337d29",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null
+    },
+    {
       "id": "c178f47a-5839-495e-bb35-44ac001b277c",
       "repoId": "",
       "name": "Repair Execution",
@@ -1171,9 +1205,9 @@
     },
     {
       "id": "e2173398-6f88-407d-b8a5-671c81a8356c",
-      "repoId": "",
+      "repoId": null,
       "name": "Determine Repair Type",
-      "description": "",
+      "description": "Check, if the service can be provided remotely.",
       "status": 0,
       "input": "",
       "output": "",
@@ -1238,6 +1272,11 @@
       "role": 4,
       "implementedBy": null,
       "repoId": null
+    },
+    {
+      "name": "Calculate Repair Scope",
+      "description": "",
+      "id": "ec92ba6d-b151-44a9-b6eb-1b2150b42ca7"
     },
     {
       "name": "Appointment/Order Status Tracking",
@@ -1936,8 +1975,15 @@
   ],
   "journeys": [
     {
+      "id": "675f0e78-ceb2-4e14-9c29-4921531589e4",
+      "name": "Warranty Process",
+      "description": "Process describing the Warranty Handling between Dealer-Importer-OEM",
+      "items": [],
+      "connections": []
+    },
+    {
       "name": "Service Process",
-      "description": "",
+      "description": "The Standard Customer Service Process",
       "items": [
         {
           "name": "d",
@@ -2456,8 +2502,8 @@
             "label": "If the customer declines the order extension, a follow-up lead should be generated"
           }
         ],
-        "panX": -319.9590721567513,
-        "panY": 302.2724374018028,
+        "panX": 609.0409278432487,
+        "panY": 319.2724374018028,
         "zoom": 0.6094045810798234
       },
       "comments": []
