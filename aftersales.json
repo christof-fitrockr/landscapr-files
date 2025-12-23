@@ -105,10 +105,22 @@
     },
     {
       "name": "Notification for Check-In",
-      "description": "",
+      "description": "The user gets notified about an upcoming appointment via a mobile app push notification or SMS depending on the personal preference of the user",
       "id": "4477b0ea-bc30-446a-ab26-8a22c1e621de",
       "apiCallIds": [
         "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+        }
       ]
     },
     {
@@ -195,11 +207,29 @@
     },
     {
       "name": "Personal Data Verification",
-      "description": "",
+      "description": "The personal data of the user is being shown. The user can confirm or correct the data.",
       "id": "4e07a7bf-628b-427e-a9f1-acd52e631345",
       "apiCallIds": [
         "3a16b383-f55d-40b7-84ff-094e87a9e016",
         "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
+      ],
+      "status": 1,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+        },
+        {
+          "apiCallReference": "e0575ec0-0183-484b-9cee-9621325b2c7d"
+        },
+        {
+          "apiCallReference": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
+        }
       ]
     },
     {
@@ -274,12 +304,29 @@
     },
     {
       "name": "Additional Offers",
-      "description": "",
+      "description": "Show additional offers to the user beside the current - already selected - services",
       "id": "646026d1-c905-4bca-abc3-50772803c90c",
       "apiCallIds": [
         "3cb95067-6006-45f2-ae16-047bd80973b0",
         "8f04d41d-b77d-45aa-83da-b4cf5164e386"
-      ]
+      ],
+      "steps": [
+        {
+          "apiCallReference": "3cb95067-6006-45f2-ae16-047bd80973b0"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "78d92d71-ee13-4441-ba4e-afd8c3ca3423"
+      ],
+      "repoId": null
     },
     {
       "id": "6731c039-7f00-492d-81d5-60159eed011b",
@@ -328,8 +375,22 @@
     },
     {
       "name": "Check-In Summary",
-      "description": "",
-      "id": "71b78b3d-7a94-4738-9ae1-8caa9dc1cd13"
+      "description": "The summary of the appointment/order is being shown to the user for final review. ",
+      "id": "71b78b3d-7a94-4738-9ae1-8caa9dc1cd13",
+      "steps": [
+        {
+          "apiCallReference": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "78d92d71-ee13-4441-ba4e-afd8c3ca3423"
+      ],
+      "repoId": null
     },
     {
       "id": "750a232c-95e1-4d14-a970-a77105364e31",
@@ -489,13 +550,15 @@
     },
     {
       "id": "85be88b5-1edb-4ef7-9b2c-0a078b82f9b1",
-      "repoId": "",
+      "repoId": null,
       "name": "Pre Check-In",
-      "description": "",
+      "description": "Pre Check-In lets the user confirm the appointment details in advance and gives the dealer an upsell possibility.",
       "status": 0,
       "input": "",
       "output": "",
-      "tags": [],
+      "tags": [
+        "App"
+      ],
       "role": 0,
       "steps": [
         {
@@ -508,10 +571,10 @@
           "processReference": "9359de8f-fe72-433f-976a-c20c92e5dec1"
         },
         {
-          "processReference": "bc283705-410e-41e9-a565-0eb5319f7f4b"
+          "processReference": "646026d1-c905-4bca-abc3-50772803c90c"
         },
         {
-          "processReference": "646026d1-c905-4bca-abc3-50772803c90c"
+          "processReference": "bc283705-410e-41e9-a565-0eb5319f7f4b"
         },
         {
           "processReference": "9ee56150-9c34-43be-8ec2-f4fde87f0557"
@@ -521,14 +584,16 @@
         }
       ],
       "apiCallIds": [],
-      "favorite": false,
-      "implementedBy": []
+      "favorite": true,
+      "implementedBy": [
+        "78d92d71-ee13-4441-ba4e-afd8c3ca3423"
+      ]
     },
     {
       "id": "87165ddd-6bcd-4984-8ecd-c363b126ca9e",
-      "repoId": "",
+      "repoId": null,
       "name": "Order Extension",
-      "description": "",
+      "description": "Something was detected during the repair of the vehicle.",
       "status": 0,
       "input": "",
       "output": "",
@@ -579,12 +644,30 @@
       "id": "9310f6c0-03b6-40a0-a521-b94acc0c5beb"
     },
     {
-      "name": "Service Event Data Verification",
-      "description": "",
+      "name": "Service Appointment Data Verification",
+      "description": "The appointment details are shown to the user (Services, Drop-Off-Method, Replacement Mobility,...). The user can confirm or modify the details.",
       "id": "9359de8f-fe72-433f-976a-c20c92e5dec1",
       "apiCallIds": [
         "3a16b383-f55d-40b7-84ff-094e87a9e016",
         "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ],
+      "status": 1,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+        },
+        {
+          "apiCallReference": "3cb95067-6006-45f2-ae16-047bd80973b0"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
       ]
     },
     {
@@ -662,10 +745,25 @@
     },
     {
       "name": "Digital Signature / Confirmation",
-      "description": "",
+      "description": "The user confirms the appointment and changes he agrees to pay for the order and the order status is changed to check-in",
       "id": "9ee56150-9c34-43be-8ec2-f4fde87f0557",
       "apiCallIds": [
         "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        },
+        {
+          "apiCallReference": "b5d63a3f-6708-488e-9731-85d89cb33a3e"
+        }
       ]
     },
     {
@@ -752,11 +850,25 @@
     },
     {
       "name": "Additional Comments",
-      "description": "",
+      "description": "Let the user specify any additional comments that should be stored at the appointment. The comment is visible to the service advisor.",
       "id": "bc283705-410e-41e9-a565-0eb5319f7f4b",
       "apiCallIds": [
         "3a16b383-f55d-40b7-84ff-094e87a9e016",
         "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "78d92d71-ee13-4441-ba4e-afd8c3ca3423"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
       ]
     },
     {
@@ -886,8 +998,29 @@
     },
     {
       "name": "Appointment/Order Status Tracking",
-      "description": "",
-      "id": "f1a3dfe1-9421-421e-95ae-93bc0258082f"
+      "description": "The Order Status tracking shows the current Appointment/Order Status to the user depending of the status tracking configuration. \n\nThe following checkpoints should be available:\n- Appointment Booking\n- Order Preparation\n- Pre Check-In\n- Waiting for Vehicle Drop-Off\n- Service in Progress\n- Waiting for Vehicle Pick-Up\n\nThe following notifications should be sent:\n- Appointment confirmed\n- Pre-Check-In conducted\n- Vehicle received\n- Service in progress\n- Ready for Pick-Up/Payment",
+      "id": "f1a3dfe1-9421-421e-95ae-93bc0258082f",
+      "steps": [
+        {
+          "apiCallReference": "4a13e673-5895-432d-a0dd-c02fb7853f9e"
+        },
+        {
+          "apiCallReference": "81c1040b-cc50-410d-9257-7b883571db66"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [
+        "App"
+      ],
+      "role": 0,
+      "implementedBy": [
+        "9135bbfa-bbd5-41b2-b327-580e3b199493",
+        "e5ded618-def7-4221-9867-0a38bb80cfae"
+      ],
+      "repoId": null,
+      "favorite": true
     },
     {
       "name": "Extract Data From TPI",
@@ -1056,6 +1189,22 @@
       "repoId": null
     },
     {
+      "name": "getDealerStatusTrackingConfiguration",
+      "description": "Returns the configuration, which service events should be shown to the user",
+      "id": "4a13e673-5895-432d-a0dd-c02fb7853f9e",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "0ceaade0-4123-4fe0-90dc-401c040bdb6e",
+      "apiGroup": "Master Data",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
+    },
+    {
       "name": "getFreeAppointmentSlots",
       "description": "",
       "implementationStatus": "",
@@ -1070,6 +1219,22 @@
       "output": "Free Appointments",
       "repoId": null,
       "id": "63b446d0-d75c-4d35-bbd9-048f45ec3b20"
+    },
+    {
+      "name": "orderUpdatedNotification",
+      "description": "The Order Management System detected an Order update and informs the subscribed consumers",
+      "id": "81c1040b-cc50-410d-9257-7b883571db66",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getAvailableReplacementMobility",
@@ -1170,6 +1335,22 @@
       "id": "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70",
       "apiGroup": "Vehicle",
       "documentation": ""
+    },
+    {
+      "name": "createOrder",
+      "description": "",
+      "id": "b5d63a3f-6708-488e-9731-85d89cb33a3e",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "SBO - getServices",
@@ -1360,6 +1541,16 @@
       "id": "69c70866-f556-4708-9dce-d68fa0c58601"
     },
     {
+      "name": "Online Check In",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "3rd Party System",
+      "id": "78d92d71-ee13-4441-ba4e-afd8c3ca3423"
+    },
+    {
       "name": "Reserve",
       "description": "",
       "id": "7fd16d3a-26e8-4104-beaa-dbcf78ce2147"
@@ -1370,13 +1561,13 @@
       "id": "9135bbfa-bbd5-41b2-b327-580e3b199493"
     },
     {
-      "name": "SBO",
+      "name": "Appointment Booking",
       "description": "",
       "status": 0,
       "contact": "",
       "url": "",
       "tags": null,
-      "systemCluster": "",
+      "systemCluster": "3rd Party System",
       "id": "a072db68-46c7-4235-9194-8d039a178a12"
     },
     {
@@ -1388,6 +1579,16 @@
       "tags": null,
       "systemCluster": "Platform",
       "id": "d1df28b3-094e-4690-aef9-ed75a010f4c0"
+    },
+    {
+      "name": "Brand Mobile App",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Customer Processes",
+      "id": "e5ded618-def7-4221-9867-0a38bb80cfae"
     },
     {
       "name": "BPCM",
@@ -1655,9 +1856,9 @@
             "id": "proc_hxebudi",
             "type": "process",
             "label": "Appointment/Order Status Tracking",
-            "x": 903.3028982493437,
+            "x": -17.267798816874915,
             "y": -285.6926204355319,
-            "width": 1593.9228012695753,
+            "width": 2514.493498335794,
             "height": 60,
             "processId": "f1a3dfe1-9421-421e-95ae-93bc0258082f"
           },
@@ -1911,8 +2112,8 @@
             "to": "proc_n4xyufg"
           }
         ],
-        "panX": 410.0409278432487,
-        "panY": 299.2724374018028,
+        "panX": -45.95907215675129,
+        "panY": 176.2724374018028,
         "zoom": 0.6094045810798234
       },
       "comments": []
