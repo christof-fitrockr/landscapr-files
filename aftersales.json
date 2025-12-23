@@ -1978,7 +1978,10 @@
       "tags": null,
       "parentId": "72b56f49-9e42-491f-b0fa-acc307ea7478",
       "repoId": null,
-      "id": "98325fef-1eca-47a9-b652-2d7099d77c42"
+      "id": "98325fef-1eca-47a9-b652-2d7099d77c42",
+      "implementedBy": [
+        "7fd16d3a-26e8-4104-beaa-dbcf78ce2147"
+      ]
     },
     {
       "name": "Appointment Booking",
@@ -2008,7 +2011,10 @@
       "tags": null,
       "parentId": "72b56f49-9e42-491f-b0fa-acc307ea7478",
       "repoId": null,
-      "id": "ce7489c6-0fbb-4a55-b007-ce4ce72bf32e"
+      "id": "ce7489c6-0fbb-4a55-b007-ce4ce72bf32e",
+      "implementedBy": [
+        "69c70866-f556-4708-9dce-d68fa0c58601"
+      ]
     },
     {
       "name": "Vehicle Management",
