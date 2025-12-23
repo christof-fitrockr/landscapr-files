@@ -1533,12 +1533,22 @@
     {
       "name": "Recall2",
       "description": "",
-      "id": "65b64d0b-0049-4120-a2b9-c33b0c25fed7"
+      "id": "65b64d0b-0049-4120-a2b9-c33b0c25fed7",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Group Quality"
     },
     {
       "name": "OCW",
       "description": "",
-      "id": "69c70866-f556-4708-9dce-d68fa0c58601"
+      "id": "69c70866-f556-4708-9dce-d68fa0c58601",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Solution Platform"
     },
     {
       "name": "Online Check In",
@@ -1553,12 +1563,22 @@
     {
       "name": "Reserve",
       "description": "",
-      "id": "7fd16d3a-26e8-4104-beaa-dbcf78ce2147"
+      "id": "7fd16d3a-26e8-4104-beaa-dbcf78ce2147",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Solution Platform"
     },
     {
       "name": "OrMa",
       "description": "",
-      "id": "9135bbfa-bbd5-41b2-b327-580e3b199493"
+      "id": "9135bbfa-bbd5-41b2-b327-580e3b199493",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Solution Platform"
     },
     {
       "name": "Appointment Booking",
@@ -1577,7 +1597,7 @@
       "contact": "",
       "url": "",
       "tags": null,
-      "systemCluster": "Platform",
+      "systemCluster": "Solution Platform",
       "id": "d1df28b3-094e-4690-aef9-ed75a010f4c0"
     },
     {
@@ -1593,7 +1613,12 @@
     {
       "name": "BPCM",
       "description": "",
-      "id": "ea7e2c1c-2522-45a9-8357-713c333799a2"
+      "id": "ea7e2c1c-2522-45a9-8357-713c333799a2",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Solution Platform"
     }
   ],
   "journeys": [
