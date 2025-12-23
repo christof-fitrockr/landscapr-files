@@ -88,6 +88,11 @@
       "implementedBy": []
     },
     {
+      "name": "Display Invoice",
+      "description": "The invoice is displayed to the customer",
+      "id": "3e49937e-a0c2-4e39-b2ed-3aa06deef786"
+    },
+    {
       "name": "Notification for Check-In",
       "description": "",
       "id": "4477b0ea-bc30-446a-ab26-8a22c1e621de",
@@ -111,9 +116,9 @@
       "implementedBy": []
     },
     {
-      "name": "Appt Booking",
+      "name": "Online Payment",
       "status": 0,
-      "description": "eäfkeapöfqemr",
+      "description": "The customer pays the invoice online",
       "input": "",
       "output": "",
       "tags": null,
@@ -123,22 +128,25 @@
       "id": "4ba01f23-019e-48e8-a24c-37715c835792",
       "steps": [
         {
-          "processReference": "994e86e5-2be0-4927-b45b-4c734509747f"
+          "apiCallReference": "994ff36f-a97b-4675-b68f-018dbd3cdb8d"
         },
         {
-          "processReference": "8a4262fe-504d-49f9-8703-86b59b7630dc"
+          "apiCallReference": "d3a691a9-3a7f-4c7b-9232-ed713c87474f"
         },
         {
-          "processReference": "5cea1fb9-8c76-4742-85a4-f63f6e3a8907"
+          "apiCallReference": "3fb3e3db-54d6-42b5-9e6c-37be4cb9d296"
         },
         {
-          "processReference": "e7d1e8c4-2ae1-420f-861d-079a03a55465"
+          "processReference": "3e49937e-a0c2-4e39-b2ed-3aa06deef786"
         },
         {
-          "processReference": "030a476e-00ea-4923-91bc-785a33e95e02"
+          "processReference": "a424d275-4735-4ff3-8861-204d9f9b200c"
+        },
+        {
+          "processReference": "fd96852c-a41c-4409-ad8b-80e5564a78b3"
         }
       ],
-      "favorite": true,
+      "favorite": false,
       "apiCallIds": [
         "302f9fe7-e279-4c99-b332-6006538e91ee"
       ]
@@ -623,6 +631,11 @@
       "implementedBy": []
     },
     {
+      "name": "Select Payment Details",
+      "description": "The customer selects the details of the payment",
+      "id": "a424d275-4735-4ff3-8861-204d9f9b200c"
+    },
+    {
       "name": "Confirm TPI Search Result",
       "description": "",
       "id": "a7d52411-9420-4c45-b2eb-74a0d5e4c4e5"
@@ -808,6 +821,11 @@
       "name": "Offer Preparation",
       "description": "",
       "id": "f8fe1986-156f-4b23-88ec-8aa0596f9441"
+    },
+    {
+      "name": "Payment confirmation",
+      "description": "The payment is confirmed",
+      "id": "fd96852c-a41c-4409-ad8b-80e5564a78b3"
     },
     {
       "id": "fdf525cf-e637-45d3-a92b-fe7f3d88b293",
@@ -1046,6 +1064,11 @@
       "output": "List of Services",
       "repoId": null,
       "id": "c3058f1c-44bf-43a4-8adf-ecf9063c8248"
+    },
+    {
+      "name": "getInvoiceById",
+      "description": "",
+      "id": "d3a691a9-3a7f-4c7b-9232-ed713c87474f"
     },
     {
       "name": "getCustomerById",
