@@ -65,15 +65,30 @@
     },
     {
       "name": "Finalize Extension",
-      "description": "A mechanic detects an issue with the vehicle currently being serviced.",
+      "description": "The service advisor gets informed about a new order extension and reviews the information from the Workshop. The suborder is finalized and being pushed to the customer",
       "id": "192316e7-c774-4cd0-9ad4-04a8ce24186b",
       "status": 0,
       "input": "",
       "output": "",
       "tags": null,
       "role": 3,
-      "implementedBy": null,
-      "repoId": null
+      "implementedBy": [
+        "313e7a1e-a9ed-4f33-97a8-28bedbe9b1b7",
+        "31a66b56-e529-407e-abcb-2148ee0b6254",
+        "263d99eb-fb13-41d3-b5eb-c775ef670882"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "81c1040b-cc50-410d-9257-7b883571db66"
+        },
+        {
+          "apiCallReference": "de6ae634-db87-486f-9b00-9a85453a95aa"
+        },
+        {
+          "apiCallReference": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3"
+        }
+      ]
     },
     {
       "id": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b",
@@ -378,7 +393,28 @@
     {
       "name": "Order Extension Review",
       "description": "The customer reviews the Order Extension and accpets/declines",
-      "id": "6c9fc8c3-5883-491d-a8eb-96d536667115"
+      "id": "6c9fc8c3-5883-491d-a8eb-96d536667115",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "e5ded618-def7-4221-9867-0a38bb80cfae",
+        "313e7a1e-a9ed-4f33-97a8-28bedbe9b1b7"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "994ff36f-a97b-4675-b68f-018dbd3cdb8d"
+        },
+        {
+          "apiCallReference": "487879a0-66c6-4e97-b137-73571cf36c36"
+        },
+        {
+          "apiCallReference": "f1000ba0-6997-4f8d-ba3b-cc0cea8371a2"
+        }
+      ]
     },
     {
       "id": "6ec835d5-c325-41a0-9327-6c1e1a56cc5d",
@@ -629,9 +665,6 @@
           "processReference": "192316e7-c774-4cd0-9ad4-04a8ce24186b"
         },
         {
-          "processReference": "28a203d6-e606-4845-a2d6-a0da978fa6e6"
-        },
-        {
           "processReference": "6c9fc8c3-5883-491d-a8eb-96d536667115"
         },
         {
@@ -685,8 +718,16 @@
       "output": "",
       "tags": null,
       "role": 4,
-      "implementedBy": null,
-      "repoId": null
+      "implementedBy": [
+        "313e7a1e-a9ed-4f33-97a8-28bedbe9b1b7",
+        "263d99eb-fb13-41d3-b5eb-c775ef670882"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3978fcf0-2510-4295-8334-735d7c103d83"
+        }
+      ]
     },
     {
       "name": "Confirm Extracted Data from TPI",
@@ -1048,8 +1089,23 @@
     },
     {
       "name": "Customer Response Notification",
-      "description": "The Dealer is being informed about a declined/accepted order notification and the order is being adapted accordingly",
-      "id": "e90a5624-d114-4a32-a4ed-bf54a13b778c"
+      "description": "The Workshop is being informed about a declined/accepted order notification and the order is being adapted accordingly",
+      "id": "e90a5624-d114-4a32-a4ed-bf54a13b778c",
+      "steps": [
+        {
+          "apiCallReference": "81c1040b-cc50-410d-9257-7b883571db66"
+        },
+        {
+          "apiCallReference": "de6ae634-db87-486f-9b00-9a85453a95aa"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 4,
+      "implementedBy": null,
+      "repoId": null
     },
     {
       "name": "Appointment/Order Status Tracking",
@@ -1194,6 +1250,11 @@
       "repoId": null
     },
     {
+      "name": "createOrderExtension",
+      "description": "The order is updated and a new suborder is being created",
+      "id": "3978fcf0-2510-4295-8334-735d7c103d83"
+    },
+    {
       "name": "getAppointmentById",
       "description": "",
       "id": "3a16b383-f55d-40b7-84ff-094e87a9e016",
@@ -1242,6 +1303,11 @@
       "input": "",
       "output": "",
       "repoId": null
+    },
+    {
+      "name": "getOrderExtensionDetails",
+      "description": "",
+      "id": "487879a0-66c6-4e97-b137-73571cf36c36"
     },
     {
       "name": "getDealerStatusTrackingConfiguration",
@@ -1456,6 +1522,11 @@
       "repoId": null
     },
     {
+      "name": "updateOrder",
+      "description": "",
+      "id": "de6ae634-db87-486f-9b00-9a85453a95aa"
+    },
+    {
       "name": "getCustomerById",
       "description": "",
       "id": "e0575ec0-0183-484b-9cee-9621325b2c7d",
@@ -1470,6 +1541,11 @@
       "input": "",
       "output": "",
       "repoId": null
+    },
+    {
+      "name": "updateOrderExtensionApproval",
+      "description": "",
+      "id": "f1000ba0-6997-4f8d-ba3b-cc0cea8371a2"
     }
   ],
   "capabilities": [
@@ -1585,6 +1661,46 @@
     }
   ],
   "applications": [
+    {
+      "name": "One.Frontend",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Dealer Process",
+      "id": "263d99eb-fb13-41d3-b5eb-c775ef670882"
+    },
+    {
+      "name": "Order Extension",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "3rd Party System",
+      "id": "313e7a1e-a9ed-4f33-97a8-28bedbe9b1b7"
+    },
+    {
+      "name": "DMS",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "3rd Party System",
+      "id": "31a66b56-e529-407e-abcb-2148ee0b6254"
+    },
+    {
+      "name": "Elsa2GO",
+      "description": "",
+      "status": 0,
+      "contact": "",
+      "url": "",
+      "tags": null,
+      "systemCluster": "Solution Core",
+      "id": "36074f0d-52f3-4021-90ca-633bc9da25b9"
+    },
     {
       "name": "Recall2",
       "description": "",
