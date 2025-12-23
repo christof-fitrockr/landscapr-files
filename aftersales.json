@@ -64,6 +64,18 @@
       ]
     },
     {
+      "name": "Finalize Extension",
+      "description": "A mechanic detects an issue with the vehicle currently being serviced.",
+      "id": "192316e7-c774-4cd0-9ad4-04a8ce24186b",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 3,
+      "implementedBy": null,
+      "repoId": null
+    },
+    {
       "id": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b",
       "repoId": "",
       "name": "Check-Out with Digital Service Station",
@@ -77,6 +89,11 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Order Extension Notification",
+      "description": "The customer is being informed about an order extension",
+      "id": "28a203d6-e606-4845-a2d6-a0da978fa6e6"
     },
     {
       "name": "Customer Contact",
@@ -359,6 +376,11 @@
       "implementedBy": []
     },
     {
+      "name": "Order Extension Review",
+      "description": "The customer reviews the Order Extension and accpets/declines",
+      "id": "6c9fc8c3-5883-491d-a8eb-96d536667115"
+    },
+    {
       "id": "6ec835d5-c325-41a0-9327-6c1e1a56cc5d",
       "repoId": "",
       "name": "Campaign Notification",
@@ -599,7 +621,23 @@
       "output": "",
       "tags": [],
       "role": 0,
-      "steps": [],
+      "steps": [
+        {
+          "processReference": "902dcc03-3a45-4ca6-bf1c-fb8dfbef0efe"
+        },
+        {
+          "processReference": "192316e7-c774-4cd0-9ad4-04a8ce24186b"
+        },
+        {
+          "processReference": "28a203d6-e606-4845-a2d6-a0da978fa6e6"
+        },
+        {
+          "processReference": "6c9fc8c3-5883-491d-a8eb-96d536667115"
+        },
+        {
+          "processReference": "e90a5624-d114-4a32-a4ed-bf54a13b778c"
+        }
+      ],
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
@@ -637,6 +675,18 @@
           "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
         }
       ]
+    },
+    {
+      "name": "Vehicle Issue detected.",
+      "description": "A mechanic detects an issue with the vehicle currently being serviced.",
+      "id": "902dcc03-3a45-4ca6-bf1c-fb8dfbef0efe",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 4,
+      "implementedBy": null,
+      "repoId": null
     },
     {
       "name": "Confirm Extracted Data from TPI",
@@ -995,6 +1045,11 @@
       "name": "Select Options",
       "description": "",
       "id": "e7d1e8c4-2ae1-420f-861d-079a03a55465"
+    },
+    {
+      "name": "Customer Response Notification",
+      "description": "The Dealer is being informed about a declined/accepted order notification and the order is being adapted accordingly",
+      "id": "e90a5624-d114-4a32-a4ed-bf54a13b778c"
     },
     {
       "name": "Appointment/Order Status Tracking",
@@ -1745,8 +1800,8 @@
             "id": "proc_xpukqh8",
             "type": "process",
             "label": "Customer Service Trigger",
-            "x": -139.48256540190462,
-            "y": -120.10007899735089,
+            "x": -68.92188808666862,
+            "y": -118.45913301327565,
             "width": 330.34728236741915,
             "height": 60,
             "processId": "95cb1f78-9ae8-4b29-a073-325a9f021e5b"
@@ -1775,8 +1830,8 @@
             "id": "proc_yhmonmk",
             "type": "process",
             "label": "Lead Processing",
-            "x": -126.05614312313321,
-            "y": 234.80507775483755,
+            "x": -65.34114171234873,
+            "y": 233.16413177076225,
             "width": 328.8554576697779,
             "height": 60,
             "processId": "5be972b9-7c7a-438b-aeb8-334b98f6bbf3"
@@ -1813,8 +1868,8 @@
             "id": "proc_l4nbntr",
             "type": "process",
             "label": "Digital Service Station",
-            "x": 1221.0615588469345,
-            "y": -124.57555309027472,
+            "x": 1260.4442624647406,
+            "y": -12.991226173157315,
             "width": 173.70568911508576,
             "height": 60,
             "processId": "d652e206-61b9-4b95-8670-78cdd05bcf60"
@@ -1833,8 +1888,8 @@
             "id": "proc_pdobgkq",
             "type": "process",
             "label": "Dialog Reception",
-            "x": 1221.0615588469338,
-            "y": -11.196876069538106,
+            "x": 1260.4442624647402,
+            "y": 64.28663919792366,
             "width": 173.70568911508576,
             "height": 60,
             "processId": "fdf525cf-e637-45d3-a92b-fe7f3d88b293"
@@ -1843,9 +1898,9 @@
             "id": "proc_kxl72a6",
             "type": "process",
             "label": "Remote Repair",
-            "x": 1492.5736538176457,
-            "y": 370.7102465266271,
-            "width": 291.5598402287461,
+            "x": 1059.363914021778,
+            "y": -200.338955931562,
+            "width": 1289.2549985465016,
             "height": 60,
             "processId": "79d384dd-36de-4af0-9478-ee0cf5d0bd2a"
           },
@@ -1863,8 +1918,8 @@
             "id": "dec_j83dw2o",
             "type": "decision",
             "label": "On-Site Repair",
-            "x": 890.1380856460513,
-            "y": 75.4270600219603,
+            "x": 970.5444388657388,
+            "y": 31.121518451928388,
             "width": 24,
             "height": 24
           },
@@ -1901,9 +1956,9 @@
             "id": "proc_i73xqkf",
             "type": "process",
             "label": "Repair Preparation",
-            "x": 1224.0452082422166,
-            "y": 121.57552202053492,
-            "width": 485.4970509221114,
+            "x": 1061.5915558187662,
+            "y": 165.88106359056684,
+            "width": 823.5319236416142,
             "height": 60,
             "processId": "4f6760f7-3373-4749-95bb-c30f79477eb8"
           },
@@ -1911,8 +1966,8 @@
             "id": "proc_gcfcdnh",
             "type": "process",
             "label": "Order Extension",
-            "x": 1928.109987065361,
-            "y": -181.0845502710662,
+            "x": 1926.469041081286,
+            "y": 232.43383771589822,
             "width": 242.32962520658384,
             "height": 60,
             "processId": "87165ddd-6bcd-4984-8ecd-c363b126ca9e"
@@ -2135,10 +2190,16 @@
             "id": "e_lcfw3qz",
             "from": "proc_l7a5jv4",
             "to": "proc_n4xyufg"
+          },
+          {
+            "id": "e_6ljhsw1",
+            "from": "proc_gcfcdnh",
+            "to": "proc_yhmonmk",
+            "label": "If the customer declines the order extension, a follow-up lead should be generated"
           }
         ],
-        "panX": -45.95907215675129,
-        "panY": 176.2724374018028,
+        "panX": 369.0409278432487,
+        "panY": 235.2724374018028,
         "zoom": 0.6094045810798234
       },
       "comments": []
