@@ -2252,8 +2252,8 @@
             "id": "proc_26x6wsk",
             "type": "process",
             "label": "Check-Out with Digital Service Station",
-            "x": 2824.696630347765,
-            "y": -100.52601659843762,
+            "x": 2834.542306252217,
+            "y": -77.55277282138402,
             "width": 310.9535612980826,
             "height": 60,
             "processId": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b"
@@ -2262,8 +2262,8 @@
             "id": "proc_cmprbjw",
             "type": "process",
             "label": "Check-Out by Service Advisor",
-            "x": 2827.680279743048,
-            "y": 87.44389530436246,
+            "x": 2834.244063679349,
+            "y": -9.37191775607765,
             "width": 318.412684786289,
             "height": 60,
             "processId": "02f4ff59-7ba7-4a78-9d52-82e49de08f0d"
@@ -2301,8 +2301,8 @@
             "id": "proc_l7a5jv4",
             "type": "process",
             "label": "Online Payment",
-            "x": 2842.7662854491123,
-            "y": 246.8728162483181,
+            "x": 2841.1253394650366,
+            "y": 61.445920047814155,
             "width": 303.7859502164292,
             "height": 60,
             "processId": "4ba01f23-019e-48e8-a24c-37715c835792"
@@ -2456,8 +2456,8 @@
             "label": "If the customer declines the order extension, a follow-up lead should be generated"
           }
         ],
-        "panX": 369.0409278432487,
-        "panY": 235.2724374018028,
+        "panX": -319.9590721567513,
+        "panY": 302.2724374018028,
         "zoom": 0.6094045810798234
       },
       "comments": []
