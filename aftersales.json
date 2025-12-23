@@ -37,7 +37,7 @@
     },
     {
       "name": "Select Services",
-      "description": "This step shows the products (Maintenance, Accessories, Central or Local Packages) in a structured way to the Customer. The customer can select from the catalog and the selected items are added to the appointment.",
+      "description": "Customer Selects required services (Maintenance, Accessories, Central or Local Packages) in a structured way to the Customer. The customer can select from the catalog and the selected items are added to the appointment. \n\nThe products offered to the customer also include upselling possibilities.",
       "id": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6",
       "apiCallIds": [
         "3cb95067-6006-45f2-ae16-047bd80973b0"
@@ -50,7 +50,18 @@
       "implementedBy": [
         "a072db68-46c7-4235-9194-8d039a178a12"
       ],
-      "repoId": null
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3cb95067-6006-45f2-ae16-047bd80973b0"
+        },
+        {
+          "apiCallReference": "c3058f1c-44bf-43a4-8adf-ecf9063c8248"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
+      ]
     },
     {
       "id": "1f88a7f7-381f-4aa9-aec8-273b24cf7d2b",
@@ -114,6 +125,37 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Confirm Personal Details",
+      "description": "The customer confirms/corrects his personal details, the details of the vehicle and the dealer",
+      "id": "46225788-f49f-454b-8807-6003956ebd23",
+      "steps": [
+        {
+          "apiCallReference": "e0575ec0-0183-484b-9cee-9621325b2c7d"
+        },
+        {
+          "apiCallReference": "994ff36f-a97b-4675-b68f-018dbd3cdb8d"
+        },
+        {
+          "apiCallReference": "172aa187-61fe-4e5d-a6ad-9ad99edb7b22"
+        },
+        {
+          "apiCallReference": "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70"
+        },
+        {
+          "apiCallReference": "92d2945f-d7ef-4c2f-a0a4-3bc4ea420640"
+        }
+      ],
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null
     },
     {
       "name": "Online Payment",
@@ -361,7 +403,7 @@
       "repoId": null,
       "name": "Appointment Booking",
       "description": "The appointment booking process is executed by a customer to book a service appointment at a dealership",
-      "status": 0,
+      "status": 1,
       "input": "",
       "output": "",
       "tags": [
@@ -371,13 +413,16 @@
       "role": 0,
       "steps": [
         {
-          "processReference": "803fa9a2-4b04-4c6c-be84-3283695b4dc3"
+          "processReference": "46225788-f49f-454b-8807-6003956ebd23"
         },
         {
           "processReference": "15c9f833-ee77-4176-9b6b-e4db66ac1bd6"
         },
         {
           "processReference": "8f4cb436-42b7-495c-8dde-457d81cf5ca0"
+        },
+        {
+          "processReference": "e15e92af-f260-486d-abdc-726c9285e588"
         },
         {
           "processReference": "b3e56e27-ecd5-4c5c-beb0-2ad5ab9df7aa"
@@ -518,7 +563,15 @@
       "implementedBy": [
         "a072db68-46c7-4235-9194-8d039a178a12"
       ],
-      "repoId": null
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "63b446d0-d75c-4d35-bbd9-048f45ec3b20"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
+      ]
     },
     {
       "name": "Confirm Extracted Data from TPI",
@@ -661,6 +714,20 @@
       "id": "b3e56e27-ecd5-4c5c-beb0-2ad5ab9df7aa",
       "apiCallIds": [
         "8cdc1058-83a0-481d-a0ca-4003f89e5a85"
+      ],
+      "status": 1,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "8cdc1058-83a0-481d-a0ca-4003f89e5a85"
+        }
       ]
     },
     {
@@ -768,6 +835,31 @@
       "implementedBy": []
     },
     {
+      "name": "Select Appointment Configuration",
+      "description": "Customer selects drop-off method & replacement mobility.",
+      "id": "e15e92af-f260-486d-abdc-726c9285e588",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "d3122769-8111-4ddf-ae52-f439fcf85991"
+        },
+        {
+          "apiCallReference": "82495a22-c710-4d85-a4d8-1d46e8ad47c9"
+        },
+        {
+          "apiCallReference": "8f04d41d-b77d-45aa-83da-b4cf5164e386"
+        }
+      ]
+    },
+    {
       "id": "e2173398-6f88-407d-b8a5-671c81a8356c",
       "repoId": "",
       "name": "Determine Repair Type",
@@ -845,7 +937,21 @@
     {
       "name": "Receive Booking Confirmation",
       "description": "",
-      "id": "fe51fbe5-320f-4adf-bf50-027d456df61d"
+      "id": "fe51fbe5-320f-4adf-bf50-027d456df61d",
+      "status": 1,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 0,
+      "implementedBy": [
+        "a072db68-46c7-4235-9194-8d039a178a12"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3a16b383-f55d-40b7-84ff-094e87a9e016"
+        }
+      ]
     }
   ],
   "apiCalls": [
@@ -966,6 +1072,22 @@
       "id": "63b446d0-d75c-4d35-bbd9-048f45ec3b20"
     },
     {
+      "name": "getAvailableReplacementMobility",
+      "description": "",
+      "id": "82495a22-c710-4d85-a4d8-1d46e8ad47c9",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
+    },
+    {
       "name": "bookAppointment",
       "description": "",
       "implementationStatus": "",
@@ -1066,9 +1188,36 @@
       "id": "c3058f1c-44bf-43a4-8adf-ecf9063c8248"
     },
     {
+      "name": "getAvailableDropOffOptions",
+      "description": "",
+      "id": "d3122769-8111-4ddf-ae52-f439fcf85991",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "b3255c78-428c-474e-a7ef-f196f47d232f",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
+    },
+    {
       "name": "getInvoiceById",
       "description": "",
-      "id": "d3a691a9-3a7f-4c7b-9232-ed713c87474f"
+      "id": "d3a691a9-3a7f-4c7b-9232-ed713c87474f",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getCustomerById",
