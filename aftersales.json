@@ -935,8 +935,8 @@
       "implementedBy": []
     },
     {
-      "name": "Receive Booking Confirmation",
-      "description": "",
+      "name": "Booking Confirmation",
+      "description": "A Booking confirmation is shown to the user. The user can review the booking and download a calendar entry",
       "id": "fe51fbe5-320f-4adf-bf50-027d456df61d",
       "status": 1,
       "input": "",
@@ -1911,8 +1911,8 @@
             "to": "proc_n4xyufg"
           }
         ],
-        "panX": -362.9590721567513,
-        "panY": 316.2724374018028,
+        "panX": 410.0409278432487,
+        "panY": 299.2724374018028,
         "zoom": 0.6094045810798234
       },
       "comments": []
