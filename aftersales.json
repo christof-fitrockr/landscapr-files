@@ -204,15 +204,19 @@
     },
     {
       "id": "45687cff-90e4-492b-9de8-a7f6eac2f876",
-      "repoId": "",
-      "name": "Campaign",
+      "repoId": null,
+      "name": "Check Open Campaigns",
       "description": "",
       "status": 0,
       "input": "",
       "output": "",
       "tags": [],
       "role": 0,
-      "steps": [],
+      "steps": [
+        {
+          "apiCallReference": "2d1f8944-c0bb-4458-9238-f9b05ee50b4a"
+        }
+      ],
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
@@ -396,8 +400,24 @@
     },
     {
       "name": "Search TPI ",
-      "description": "",
-      "id": "6276cacf-5245-41be-a292-8e79a34d0d67"
+      "description": "Based on the VIN and the Customer Statement, search for the List of the best fitting TPI",
+      "id": "6276cacf-5245-41be-a292-8e79a34d0d67",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [
+        "AI"
+      ],
+      "role": 3,
+      "implementedBy": [
+        "263d99eb-fb13-41d3-b5eb-c775ef670882"
+      ],
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "4e7bc906-f51a-4e1e-952c-a177a03df286"
+        }
+      ]
     },
     {
       "name": "Additional Offers",
@@ -454,6 +474,26 @@
       "apiCallIds": [],
       "favorite": false,
       "implementedBy": []
+    },
+    {
+      "name": "Review Order",
+      "description": "The Service Advisor reviews the order and has the possibility to modify the order or add upselling packages",
+      "id": "6b63f1cf-3569-4919-8c7f-281b20514394",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": 3,
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "3cb95067-6006-45f2-ae16-047bd80973b0"
+        },
+        {
+          "apiCallReference": "de6ae634-db87-486f-9b00-9a85453a95aa"
+        }
+      ]
     },
     {
       "name": "Order Extension Review",
@@ -545,10 +585,10 @@
       "role": 3,
       "steps": [
         {
-          "processReference": "f1f108c0-ed0a-49bc-b662-76a7057382c2"
+          "processReference": "bb81da09-06d0-45b1-b203-6b2e30176d59"
         },
         {
-          "processReference": "9310f6c0-03b6-40a0-a521-b94acc0c5beb"
+          "processReference": "6b63f1cf-3569-4919-8c7f-281b20514394"
         },
         {
           "processReference": "e509917e-acbb-494f-881d-0d524f6f7c4d"
@@ -580,6 +620,18 @@
       "name": "Review Order",
       "description": "",
       "id": "7a757dc9-09bd-4111-ac08-abcf50d9ebd4"
+    },
+    {
+      "name": "Complete Order",
+      "description": "Based on Main Parts and Labor, find additional needed Parts and Labor to complete the order",
+      "id": "7b2d24f2-6b6e-4e0d-b278-a4b49126cb9f",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": null,
+      "role": "",
+      "implementedBy": null,
+      "repoId": null
     },
     {
       "id": "7b6ed73d-88e4-4661-923d-ffcfde5481d3",
@@ -1026,6 +1078,40 @@
       "id": "b85f62d9-b152-470b-8ea4-571e3a580236"
     },
     {
+      "name": "Calculate Order Scope",
+      "description": "",
+      "id": "bb81da09-06d0-45b1-b203-6b2e30176d59",
+      "steps": [
+        {
+          "apiCallReference": "195260af-e7d1-4c96-9317-b5233aa5d6d0"
+        },
+        {
+          "apiCallReference": "b1ee26ca-07e2-4fb2-abad-3ae6afcbab70"
+        },
+        {
+          "apiCallReference": "92d2945f-d7ef-4c2f-a0a4-3bc4ea420640"
+        },
+        {
+          "processReference": "6276cacf-5245-41be-a292-8e79a34d0d67"
+        },
+        {
+          "processReference": "f1f108c0-ed0a-49bc-b662-76a7057382c2"
+        },
+        {
+          "processReference": "9310f6c0-03b6-40a0-a521-b94acc0c5beb"
+        },
+        {
+          "processReference": "45687cff-90e4-492b-9de8-a7f6eac2f876"
+        },
+        {
+          "processReference": "ea58001b-4f86-4ff6-ac8c-67812f118d5b"
+        },
+        {
+          "processReference": "7b2d24f2-6b6e-4e0d-b278-a4b49126cb9f"
+        }
+      ]
+    },
+    {
       "name": "Additional Comments",
       "description": "Let the user specify any additional comments that should be stored at the appointment. The comment is visible to the service advisor.",
       "id": "bc283705-410e-41e9-a565-0eb5319f7f4b",
@@ -1274,6 +1360,11 @@
       "repoId": null
     },
     {
+      "name": "Calculate Next Services",
+      "description": "",
+      "id": "ea58001b-4f86-4ff6-ac8c-67812f118d5b"
+    },
+    {
       "name": "Calculate Repair Scope",
       "description": "",
       "id": "ec92ba6d-b151-44a9-b6eb-1b2150b42ca7"
@@ -1306,8 +1397,22 @@
     },
     {
       "name": "Extract Data From TPI",
-      "description": "",
-      "id": "f1f108c0-ed0a-49bc-b662-76a7057382c2"
+      "description": "The Service Advisor has confirmed the TPI and data gets extracted from the Document",
+      "id": "f1f108c0-ed0a-49bc-b662-76a7057382c2",
+      "status": 0,
+      "input": "",
+      "output": "",
+      "tags": [
+        "AI"
+      ],
+      "role": 3,
+      "implementedBy": null,
+      "repoId": null,
+      "steps": [
+        {
+          "apiCallReference": "38b25fa5-a12c-41d1-b7cd-3e508447824b"
+        }
+      ]
     },
     {
       "id": "f827c076-9a68-4b24-8dbf-99d942f199b3",
@@ -1405,6 +1510,42 @@
       "repoId": null
     },
     {
+      "name": "getOrderById",
+      "description": "",
+      "id": "195260af-e7d1-4c96-9317-b5233aa5d6d0",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": [
+        "9135bbfa-bbd5-41b2-b327-580e3b199493"
+      ],
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
+    },
+    {
+      "name": "getOpenCampaignsById",
+      "description": "",
+      "id": "2d1f8944-c0bb-4458-9238-f9b05ee50b4a",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "72b56f49-9e42-491f-b0fa-acc307ea7478",
+      "apiGroup": "Vehicle",
+      "documentation": "",
+      "implementedBy": [
+        "65b64d0b-0049-4120-a2b9-c33b0c25fed7"
+      ],
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
+    },
+    {
       "name": "pushUserNotification",
       "description": "",
       "id": "347d297d-54f2-4a9e-8d99-ee9c2e5fe8d3",
@@ -1421,9 +1562,25 @@
       "repoId": null
     },
     {
+      "name": "extractDataFromTPI",
+      "description": "Extracts Labor, Parts, Schadensnummer, KD-Nummer, KEFA-Coding from TPI",
+      "id": "38b25fa5-a12c-41d1-b7cd-3e508447824b"
+    },
+    {
       "name": "createOrderExtension",
       "description": "The order is updated and a new suborder is being created",
-      "id": "3978fcf0-2510-4295-8334-735d7c103d83"
+      "id": "3978fcf0-2510-4295-8334-735d7c103d83",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getAppointmentById",
@@ -1478,7 +1635,18 @@
     {
       "name": "getOrderExtensionDetails",
       "description": "",
-      "id": "487879a0-66c6-4e97-b137-73571cf36c36"
+      "id": "487879a0-66c6-4e97-b137-73571cf36c36",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getDealerStatusTrackingConfiguration",
@@ -1495,6 +1663,11 @@
       "input": "",
       "output": "",
       "repoId": null
+    },
+    {
+      "name": "searchTpiByCustomerStatementAndVIN",
+      "description": "",
+      "id": "4e7bc906-f51a-4e1e-952c-a177a03df286"
     },
     {
       "name": "getFreeAppointmentSlots",
@@ -1695,7 +1868,18 @@
     {
       "name": "updateOrder",
       "description": "",
-      "id": "de6ae634-db87-486f-9b00-9a85453a95aa"
+      "id": "de6ae634-db87-486f-9b00-9a85453a95aa",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     },
     {
       "name": "getCustomerById",
@@ -1716,7 +1900,18 @@
     {
       "name": "updateOrderExtensionApproval",
       "description": "",
-      "id": "f1000ba0-6997-4f8d-ba3b-cc0cea8371a2"
+      "id": "f1000ba0-6997-4f8d-ba3b-cc0cea8371a2",
+      "implementationStatus": "",
+      "implementationType": "",
+      "status": 0,
+      "capabilityId": "58dbd784-f075-40cd-9106-785bd1a89607",
+      "apiGroup": "Order",
+      "documentation": "",
+      "implementedBy": null,
+      "tags": null,
+      "input": "",
+      "output": "",
+      "repoId": null
     }
   ],
   "capabilities": [
