@@ -1608,6 +1608,16 @@
             "width": 198.76540723561226,
             "height": 60,
             "processId": "7b6ed73d-88e4-4661-923d-ffcfde5481d3"
+          },
+          {
+            "id": "proc_l7a5jv4",
+            "type": "process",
+            "label": "Online Payment",
+            "x": 2842.7662854491123,
+            "y": 246.8728162483181,
+            "width": 303.7859502164292,
+            "height": 60,
+            "processId": "4ba01f23-019e-48e8-a24c-37715c835792"
           }
         ],
         "edges": [
@@ -1740,11 +1750,21 @@
             "id": "e_0ges3vw",
             "from": "proc_4ia4bom",
             "to": "dec_hrutcec"
+          },
+          {
+            "id": "e_7573m1h",
+            "from": "dec_hiitpqc",
+            "to": "proc_l7a5jv4"
+          },
+          {
+            "id": "e_lcfw3qz",
+            "from": "proc_l7a5jv4",
+            "to": "proc_n4xyufg"
           }
         ],
-        "panX": 247.26502954180228,
-        "panY": 373.87661219548136,
-        "zoom": 0.4084961068437567
+        "panX": -362.9590721567513,
+        "panY": 316.2724374018028,
+        "zoom": 0.6094045810798234
       },
       "comments": []
     }
